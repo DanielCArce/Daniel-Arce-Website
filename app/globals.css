@@ -31,3 +31,9 @@ body {
     text-wrap: balance;
   }
 }
+ /* *{
+  border: 1px dashed red
+ } */
+a:hover{
+  border-bottom: 1px solid white;
+}
