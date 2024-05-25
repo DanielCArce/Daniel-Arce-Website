@@ -15,7 +15,7 @@ function Navigation() {
                     <Link href="/me">About</Link>
                   </li>
                   <li>
-                    <Link href="/contact">Lets talk now</Link>
+                    <Link href="/contact-me">Lets talk now</Link>
                   </li>
             </ul>
           </nav>
