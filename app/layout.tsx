@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
+import { GoogleTagManager} from '@next/third-parties/google'
 import { Inter } from "next/font/google";
 import "./globals.css";
-import PageHeader from '../components/PageHeader';
-import PageFooter from '../components/PageFooter'
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Daniel Campos Arce",
-  description: "More than a simple web developer",
+  description: "Software Developer",
 };
 
 export default function RootLayout({
@@ -18,10 +17,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} px-8 pt-4`}>
-        <PageHeader/>
-        {children}
-        <PageFooter/>
+      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTAG} />
+      <body className={`${inter.className}`}>
+        <main>
+          {children}
+        </main>
         </body>
     </html>
   );
