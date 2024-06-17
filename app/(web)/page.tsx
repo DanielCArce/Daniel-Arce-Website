@@ -1,6 +1,5 @@
 import React from "react";
 import type { Metadata } from "next";
-import MainNav from "@/components/MainNav";
 import SocialWidget from "@/components/SocialWidget";
 export const metadata: Metadata = {
   title: "Daniel Campos Arce - Software Developer",
@@ -81,7 +80,6 @@ function page() {
       </section>
       <section className="w-1/2 bg-cyan-800">
         <article>
-          <MainNav />
           <section className="my-11">
             <h1 className="uppercase text-white font-bold text-7xl text-center">
               Daniel

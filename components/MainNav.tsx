@@ -4,7 +4,7 @@ import React from 'react'
 const MainNav = () => {
   return (
       <nav>
-          <ul className="flex flex-row gap-2 justify-center pt-9">
+          <ul className="flex flex-row gap-2">
               <li>
                   <Link href="/">Home</Link>
               </li>
