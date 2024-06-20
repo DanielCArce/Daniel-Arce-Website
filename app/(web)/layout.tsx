@@ -3,12 +3,13 @@ import { GoogleTagManager} from '@next/third-parties/google'
 import { Montserrat } from "next/font/google";
 import "../globals.css";
 import MainNav from "@/components/MainNav";
+import MainHeader from "@/components/MainHeader";
 
 const font = Montserrat({subsets:['latin']})
 
 export const metadata: Metadata = {
   title: "Daniel Campos Arce",
-  description: "Software Developer, npm run ",
+  description: "Creating Websites and more ",
 };
 
 export default function RootLayout({
@@ -19,14 +20,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <GoogleTagManager gtmId="GTM-P8ZXV62T" />
-      <body className={`${font.className}`}>
-        <header className="flex flex-row justify-between items-center mb-6 px-8 py-4 content-center">
-          <h1 className="text-3xl">DA</h1>
-        <MainNav />
-        </header>
+      <body className={`${font.className} bg-white text-white`}>
+        <MainHeader/>
         <main>
           {children}
         </main>
+        <footer>
+          <p className="text-center text-black">Creating software that have results since 2021</p>
+        </footer>
         </body>
     </html>
   );

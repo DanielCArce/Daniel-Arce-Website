@@ -8,7 +8,6 @@ export async function generateStaticParams() {
 }
 async function Page({ params }: { params: { slug: string } }){
     const post = await getPostContent(params.slug)
-    console.log({slugPost: post})
     return (
         <>
         <p>{JSON.stringify(params)}</p>
