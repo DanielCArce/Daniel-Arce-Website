@@ -15,10 +15,10 @@ const MainNav = () => {
                   <Link href="/services">Services</Link>
               </li>
               <li>
-                <Link href="/contact">Contact </Link>
+                <Link href="/blog">Blog</Link>
               </li>
               <li>
-                <Link href="/blog">Blog</Link>
+                <Link href="/contact" className="border-white py-2 px-2 border-2 hover:border-orange-400">Lets Talk</Link>
               </li>
           </ul>
     </nav>
