@@ -6,22 +6,22 @@ function SocialWidget() {
       <ul className="flex flex-row gap-4 mt-6 text-center justify-center">
           <li>
               <Link href="https://github.com/danielcarce">
-                  <FaGithub size="2rem"/>
+                  <FaGithub size="2rem" color="#000000"/>
               </Link>
           </li>
           <li>
               <Link href="https://linkedin.com/in/danielcarce">
-                  <FaLinkedin size="2rem"/>
+                  <FaLinkedin size="2rem" color="#000000"/>
               </Link>
           </li>
           <li>
-              <Link href="https://instagram.com/dca_consultor">
-                <FaInstagram size="2rem"/>
+              <Link href="https://instagram.com/dsoftwaredev">
+                <FaInstagram size="2rem" color="#000000"/>
                 </Link>
           </li>
           <li>
               <Link href="https://wa.me/50664857937">
-                  <FaWhatsapp size="2rem"/>
+                  <FaWhatsapp size="2rem" color="#000000"/>
               </Link>
           </li>
     </ul>
