@@ -6,12 +6,21 @@ export async function generateStaticParams() {
     const allPosts = await getAllPosts()
     return allPosts
 }
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+    const { data} = await getPostContent(params.slug)
+    return {
+        title: data.title,
+        description: data.description,
+        author: data.author
+    }
+}
 async function Page({ params }: { params: { slug: string } }){
-    const post = await getPostContent(params.slug)
+    const {mdxSource: source} = await getPostContent(params.slug)
+
     return (
         <>
         <p>{JSON.stringify(params)}</p>
-        <MDXRemote source={post}/>
+            <MDXRemote {...source} />
         <SocialWidget/>
         </>
     )
