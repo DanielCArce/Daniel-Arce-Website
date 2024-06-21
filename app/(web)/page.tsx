@@ -4,7 +4,7 @@ import SocialWidget from "@/components/SocialWidget";
 import {FaArrowTrendUp} from 'react-icons/fa6'
 import Link from "next/link";
 export const metadata: Metadata = {
-  title: "Daniel Campos Arce - Software Developer",
+  title: "Daniel Arce - FullStack Developer",
   description: "Websites, Mobile Apps and all your need in software",
 };
 function page() {
