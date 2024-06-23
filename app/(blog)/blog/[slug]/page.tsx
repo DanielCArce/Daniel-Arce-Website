@@ -1,8 +1,11 @@
 import { getAllPosts, getPostContent } from "@/libs/readPosts"
 import SocialWidget from '@/components/SocialWidget'
 import {MDXRemote} from 'next-mdx-remote/rsc'
+type Components = {
+    children: JSX.Element
+}
 const components = {
-  h1: (props) => (
+  h1: (props :Components) => (
     <h1 {...props} className="text-2xl font-bold uppercase">
       {props.children}
     </h1>
