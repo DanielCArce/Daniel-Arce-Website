@@ -28,11 +28,6 @@ async function Page({ params }: { params: { slug: string } }){
     console.log({metaFromPAGE: meta})
     return (
         <section className="w-full px-7 flex flex-col justify-center">
-            <ul className="flex gap-2">
-                <li>{meta.author}</li>
-                <li>{ meta.date}</li>
-                <li>{ meta.type}</li>
-            </ul>
             <MDXRemote source={content} options={{parseFrontmatter:true}} components={CustomComponents}/>
         </section>
     )
