@@ -1,8 +1,9 @@
 import React from 'react'
-import {getAllPosts} from '@/libs/readPosts'
+import {getAllPosts, getPostMetadata} from '@/libs/readPosts'
 import Link from 'next/link'
 async function page() {
   const allPosts = await getAllPosts()
+  console.log({allPosts})
   return (
     <div>
       <p>{ JSON.stringify(allPosts)}</p>

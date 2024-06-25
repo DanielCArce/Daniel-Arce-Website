@@ -1,11 +1,15 @@
 import { getAllPosts, getPostContent } from "@/libs/readPosts"
 import SocialWidget from '@/components/SocialWidget'
 import {MDXRemote} from 'next-mdx-remote/rsc'
-const H1Component = (props: any) => {
-    return (<h1 {...props}>{ props.children}</h1>)
-}
+import {H1Component, PComponent, H2Component, LIComponent, ULComponent,H3Component } from '@/components/CustomMDX'
 const CustomComponents = {
-    H1Component
+    h1: H1Component,
+    h2: H2Component,
+    h3: H3Component,
+    p: PComponent,
+    li: LIComponent,
+    ul: ULComponent,
+    Social: SocialWidget
 }
 export async function generateStaticParams() {
     const allPosts = await getAllPosts()
@@ -14,18 +18,23 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: { slug: string } }) {
     const { meta } = await getPostContent(params.slug)
     return {
-        title: `Daniel Arce - ${meta.title}`,
+        title: `Daniel Arce - ${meta.title} - ${meta.type}`,
         author: meta.author,
         description: meta.description
     }
 }
 async function Page({ params }: { params: { slug: string } }){
-    const {content} = await getPostContent(params.slug)
+    const {meta, content} = await getPostContent(params.slug)
+    console.log({metaFromPAGE: meta})
     return (
-        <>
+        <section className="w-full px-7 flex flex-col justify-center">
+            <ul className="flex gap-2">
+                <li>{meta.author}</li>
+                <li>{ meta.date}</li>
+                <li>{ meta.type}</li>
+            </ul>
             <MDXRemote source={content} options={{parseFrontmatter:true}} components={CustomComponents}/>
-        <SocialWidget/>
-        </>
+        </section>
     )
 }
 
