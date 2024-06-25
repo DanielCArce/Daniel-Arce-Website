@@ -4,7 +4,8 @@ import { Montserrat } from "next/font/google";
 import "../globals.css";
 import MainNav from "@/components/MainNav";
 import MainHeader from "@/components/MainHeader";
-
+import { Analytics } from '@vercel/analytics/react'
+import {SpeedInsights} from '@vercel/speed-insights/next'
 const font = Montserrat({subsets:['latin']})
 
 export const metadata: Metadata = {
@@ -28,6 +29,8 @@ export default function RootLayout({
         <footer>
           <p className="text-center text-black">Creating software that have results since 2021</p>
         </footer>
+        <SpeedInsights/>
+        <Analytics/>
         </body>
     </html>
   );
