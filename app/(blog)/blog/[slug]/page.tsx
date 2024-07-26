@@ -2,6 +2,11 @@ import { getAllPosts, getPostContent } from "@/libs/readPosts"
 import SocialWidget from '@/components/SocialWidget'
 import {MDXRemote} from 'next-mdx-remote/rsc'
 import {H1Component, PComponent, H2Component, LIComponent, ULComponent,H3Component } from '@/components/CustomMDX'
+type PageParams = {
+    params:{
+        slug: string
+    }
+}
 const CustomComponents = {
     h1: H1Component,
     h2: H2Component,
@@ -23,9 +28,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
         description: meta.description
     }
 }
-async function Page({ params }: { params: { slug: string } }){
+async function Page({ params }: PageParams){
     const {meta, content} = await getPostContent(params.slug)
-    console.log({metaFromPAGE: meta})
     return (
         <section className="w-full px-7 flex flex-col justify-center">
             <MDXRemote source={content} options={{parseFrontmatter:true}} components={CustomComponents}/>

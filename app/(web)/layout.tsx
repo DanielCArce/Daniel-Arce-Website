@@ -1,11 +1,10 @@
+import MainHeader from "@/components/MainHeader";
+import { GoogleTagManager } from '@next/third-parties/google';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from "next";
-import { GoogleTagManager} from '@next/third-parties/google'
 import { Montserrat } from "next/font/google";
 import "../globals.css";
-import MainNav from "@/components/MainNav";
-import MainHeader from "@/components/MainHeader";
-import { Analytics } from '@vercel/analytics/react'
-import {SpeedInsights} from '@vercel/speed-insights/next'
 const font = Montserrat({subsets:['latin']})
 
 export const metadata: Metadata = {
