@@ -9,28 +9,9 @@ export const metadata: Metadata = {
 };
 function page() {
   return (
-    <div className="px-4 flex flex-row justify-between">
-      <section className="flex flex-col items-center justify-center gap-2 w-1/2 sm:flex-row">
-        <div>
-          <h2 className="text-5xl uppercase font-black text-black">Daniel</h2>
-          <h2 className="text-5xl uppercase font-black text-black">Arce</h2>
-        </div>
-      </section>
-      <section className="flex flex-col items justify-around h-screen gap-2 w-1/2">
-      <div>
-          <h3 className="font-medium text-xl text-black text-center">Fullstack Developer</h3>
-          <h4 className="text-lg font-light text-black text-center">
-            <div className="text-center"> Building digital solutions that looks like</div>
-            <div className="text-center"><span className="font-semibold">websites</span>, <span className="font-semibold">mobile apps</span> and more</div>
-          </h4>
-          <SocialWidget />
-          <Link href="/services" className="text-[#]">
-            <div className="flex flex-row gap-2 text-center justify-center mt-3">
-              
-            <span className="text-[#FF9800]">Services & Projects</span> <FaArrowTrendUp size="2rem" color="#FF9800"/>
-          </div>
-          </Link>
-        </div>
+    <div>
+      <section>
+        <h2 className="text-3xl text-gray-800 font-black font-sans text-center">Daniel Arce</h2>
       </section>
     </div>
   );

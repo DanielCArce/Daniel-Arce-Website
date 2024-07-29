@@ -18,7 +18,7 @@ async function BlogCard(props) {
   const metaInfo = await getPostMetadata(props.post);
   const postInfo = metaInfo.meta
   return (
-    <div className="py-2 px-4">
+    <div className="py-2 px-4 w-1/2">
       <h3 className="font-2xl font-bold">{postInfo.title}</h3>
       <h4 className="font-lg font-light">Author:{ postInfo.author}</h4>
       <p>{postInfo.description}</p>

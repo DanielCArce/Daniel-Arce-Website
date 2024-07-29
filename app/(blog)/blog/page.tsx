@@ -5,12 +5,16 @@ async function page() {
   const allBlogPostsSlugs = await getAllPosts()
 
   return (
-    <div className="flex justify-around">
-      <h2 className="font-3xl font-semiback">Posts</h2>
-      {
+    <div className="px-5">
+      <header>
+        <h2 className="text-3xl font-semibold pl-2">Blog</h2>
+        <h3 className="text-lg font-light text-italic">Some stories start with a post </h3>
+      </header>
+      <section className="flex justify-around flex-wrap">{
         allBlogPostsSlugs.map((post) => {
         return (<BlogCard key={post.slug} post={post.slug}/>)})
       }
+      </section>
     </div>
   )
 }
