@@ -8,6 +8,6 @@ const resend = new Resend(process.env.RESEND_KEY);
         from: "daniel.camposarce@gmail.com",
         to: "daniel.camposarce@gmail.com",
         subject: " New Message From Website",
-        text:formData.message
+        text:formData.get('message')
     })
 }
