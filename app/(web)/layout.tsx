@@ -22,7 +22,7 @@ export default function RootLayout({
       <GoogleTagManager gtmId="GTM-P8ZXV62T" />
       <body className={`${font.className} bg-white text-white`}>
         <MainHeader/>
-        <main>
+        <main className="px-4 pt-5">
           {children}
         </main>
         <footer>
