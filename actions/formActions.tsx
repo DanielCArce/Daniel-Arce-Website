@@ -6,6 +6,6 @@ export async function sendEmail(formData: FormData) {
     let message = formData.get('message')
     console.log({ formData })
     console.log({ msg: formData.get('message') })
-    Alert(`${message}`)
+    alert(`${message}`)
     
 }
