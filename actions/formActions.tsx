@@ -6,6 +6,12 @@ export async function sendEmail(formData: FormData) {
     let message = formData.get('message')
     console.log({ formData })
     console.log({ msg: formData.get('message') })
+    mailer.emails.send({
+        from: 'Acme <onboarding@resend.dev>',
+  to: ['daniel.camposarce@gmail.com'],
+  subject: 'hello world',
+  text: 'it works!',
+    })
     alert(`${message}`)
     
 }
