@@ -16,7 +16,8 @@ function MainNav() {
       <FaBars onClick={ toggleMenu} />
       </span>
       {
-        isMenuOpen ? <ul className="xsm:flex sm:flex xsm:flex-col sm:flex-col xsm:gap-2 sm:gap-2 md:hidden lg:hidden absolute py-1 px-1 bg-gray-900 w-3/4 h-screen top-0 right-0">
+        isMenuOpen ? <>
+          <ul className="xsm:flex sm:flex xsm:flex-col sm:flex-col xsm:gap-2 sm:gap-2 md:hidden lg:hidden absolute py-1 px-1 bg-gray-900 w-3/4 h-screen top-0 right-0 justify-center">
       <span className="px-4 py-1"><FaAngleRight onClick={ toggleMenu}/></span>
             <li>
               <Link href={"/services"}>Services</Link>
@@ -31,7 +32,7 @@ function MainNav() {
               <Link href={"/blog"}>Blog</Link>
             </li>
 
-        </ul> : null}
+        </ul> </>: null}
       <ul className="xsm:hidden sm:hidden hidden md:flex lg:flex md:flex-row lg:flex-row md:gap-2 lg:gap-2">
             <li>
               <Link href={"/services"}>Services</Link>
