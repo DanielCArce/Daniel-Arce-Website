@@ -10,7 +10,7 @@ async function page() {
         <h2 className="text-3xl font-semibold pl-2">Blog</h2>
         <h3 className="text-lg font-light text-italic">Some stories start with a post </h3>
       </header>
-      <section className="flex justify-around flex-wrap">{
+      <section className="flex flex-wrap flex-col">{
         allBlogPostsSlugs.map((post) => {
         return (<BlogCard key={post.slug} post={post.slug}/>)})
       }

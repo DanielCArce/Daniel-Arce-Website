@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 async function Page({ params }: PageParams){
     const {meta, content} = await getPostContent(params.slug)
     return (
-        <section className="w-full px-7 flex flex-col justify-center">
+        <section className="w-3/4 px-7 py-3 m-auto flex flex-col justify-center">
             <MDXRemote source={content} options={{parseFrontmatter:true}} components={CustomComponents}/>
         </section>
     )
