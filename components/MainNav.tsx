@@ -1,14 +1,16 @@
 "use client";
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import React, { useState, useLayoutEffect } from "react";
 import { usePathname } from 'next/navigation'
 import { FaBars, FaAngleRight } from "react-icons/fa";
 function MainNav() {
   const route = usePathname()
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => setIsMenuOpen((prevState) => !prevState);
-  useEffect(function(){
-    toggleMenu()
+  useLayoutEffect(function(){
+    if (isMenuOpen != true) {
+      toggleMenu()
+    }
   },[route])
   return (
     <nav className="text-gray-200">
