@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 function page() {
   return (
-    <div className="flex md:flex-row gap-5 py-10 sm:flex-col xsm:flex-col">
+    <div className="flex md:flex-row gap-5 py-10 sm:flex-col xsm:flex-col flex-col items-center justify-center">
       <section className="md:w-1/2 sm:w-screen xsm:flex sm:flex xsm:items-center xsm:justify-center sm:items-center sm:justify-center xsm:flex-col sm:flex-col">
         <h2 className="text-5xl uppercase text-gray-800 font-black font-sans">Daniel Arce</h2>
         <h3 className="text-2xl text-gray-500 font-medium">Fullstack  Developer</h3>

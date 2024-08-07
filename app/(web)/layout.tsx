@@ -10,6 +10,15 @@ const font = Montserrat({subsets:['latin']})
 export const metadata: Metadata = {
   title: "Daniel Campos Arce",
   description: "Creating Websites and more ",
+  authors: [{ name: "Daniel Arce", url: "https//darce.vercel.app" }],
+  twitter: {
+    creator: "Daniel Arce",
+    card:"summary"
+  },
+  keywords: [],
+  icons: {
+    
+  }
 };
 
 export default function RootLayout({
@@ -25,9 +34,6 @@ export default function RootLayout({
         <main className="px-4 pt-5">
           {children}
         </main>
-        <footer>
-          <p className="text-center text-black">Creating software that have results since 2021</p>
-        </footer>
         <SpeedInsights/>
         <Analytics/>
         </body>
