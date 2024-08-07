@@ -18,7 +18,7 @@ function page() {
           <Link href={"/services"} className="capitalize bg-emerald-200 px-3 py-2 rounded-lg hover:border-2 border-gray-300">
             View services
           </Link>
-          <Link href={"/contact"} className="capitalize rounded-lg border-2 px-3 py-2 hover:border-2 border-gray-300">
+          <Link href={"/contact"} className="capitalize rounded-lg border-2 px-3 py-2 hover:border-2 border-gray-300 hover:shadow-md">
             Contact me
           </Link>
         </div>
