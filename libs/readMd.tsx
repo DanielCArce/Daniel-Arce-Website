@@ -1,5 +1,6 @@
 import { compileMDX } from 'next-mdx-remote/rsc'
 import fs from 'node:fs'
+import { ReactElement } from 'react';
 const ROOT_PATH = 'posts-in-blog';
 
 export async function readFile(file_name:string) {
@@ -23,10 +24,10 @@ export async function getMetadataFromFile(file_name: string) {
             parseFrontmatter: true
         }
     });
-    const {frontmatter} = src
-    console.log({frontmatter})
+    const source = src
+    console.log({file:source.frontmatter})
     return {
-        metadata: frontmatter,
+        metadata: source.frontmatter,
         slug: file_name
     }
 }
