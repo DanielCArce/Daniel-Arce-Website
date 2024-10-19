@@ -10,7 +10,7 @@ export async function sendEmail(formData: FormData) {
     resend.emails.send({
         from: 'onboarding@resend.dev',
   to: ['daniel.camposarce@gmail.com'],
-  subject: 'hello world',
+  subject:`[${formData.get('topic')}] ${formData.get('name')}`,
   text: `it works!  ${message}`,
     })
     redirect('/')

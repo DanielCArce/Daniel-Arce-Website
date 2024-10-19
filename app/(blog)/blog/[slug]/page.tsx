@@ -1,40 +1,30 @@
-import { getAllPosts, getPostContent } from "@/libs/readPosts"
-import SocialWidget from '@/components/SocialWidget'
-import {MDXRemote} from 'next-mdx-remote/rsc'
-import {H1Component, PComponent, H2Component, LIComponent, ULComponent,H3Component } from '@/components/CustomMDX'
-type PageParams = {
+import { getAllFiles, getContentFromFile, getMetadataFromFile, readFile } from '@/libs/readMd'
+import {H1, H2, H3,P, LI, UL} from '@/components/mdx'
+import { MDXRemote } from 'next-mdx-remote/rsc'
+import React from 'react'
+interface BlogPageParams {
     params:{
-        slug: string
+            slug: string
     }
 }
-const CustomComponents = {
-    h1: H1Component,
-    h2: H2Component,
-    h3: H3Component,
-    p: PComponent,
-    li: LIComponent,
-    ul: ULComponent,
-    Social: SocialWidget
-}
+const mdxComponents = {H1,H2,H3,P,LI,UL}
 export async function generateStaticParams() {
-    const allPosts = await getAllPosts()
+    const allPosts = await getAllFiles();
     return allPosts
 }
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-    const { meta } = await getPostContent(params.slug)
+export async function generateMetadata({ params }: BlogPageParams) {
+    const { metadata } = await getMetadataFromFile(params.slug)
     return {
-        title: `Daniel Arce - ${meta.title} - ${meta.type}`,
-        author: meta.author,
-        description: meta.description
+        title: metadata.title,
+        description: metadata.description,
+        author:metadata.author
     }
 }
-async function Page({ params }: PageParams){
-    const {meta, content} = await getPostContent(params.slug)
-    return (
-        <section className="w-3/4 px-7 py-3 m-auto flex flex-col justify-center">
-            <MDXRemote source={content} options={{parseFrontmatter:true}} components={CustomComponents}/>
-        </section>
-    )
+async function page({params}: BlogPageParams) {
+    const postSource = await readFile(params.slug)
+  return (
+      <MDXRemote source={postSource} options={{parseFrontmatter:true}} components={mdxComponents}/>
+  )
 }
 
-export default Page
+export default page

@@ -3,11 +3,14 @@ import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
-import "../globals.css";
+import "@/app/globals.css";
 const font = Montserrat({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-    title: "Daniel Campos Arce",
+    title: {
+        template: ' %s - Daniel Arce',
+        default: 'Blog - Daniel Arce'
+    },
     description: "Creating Websites and more ",
     authors: [{ name: "Daniel Arce", url: "https//darce.vercel.app" }],
     twitter: {
@@ -25,7 +28,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <GoogleTagManager gtmId="GTM-P8ZXV62T" />
-            <body className={`${font.className} bg-white text-black`}>
+            <body className={`${font.className} bg-white text-gray-700`}>
                 <main className="px-4 pt-5">
                     {children}
                 </main>

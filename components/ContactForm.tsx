@@ -1,29 +1,38 @@
-"use client";
-import React from "react";
+import React from 'react'
 import {sendEmail} from '@/actions/formActions'
+
 function ContactForm() {
   return (
-    <>
-      <h3 className="text-2xl font-bold uppercase font-sans text-black mb-3 text-center">Contact</h3>
-    <form action={sendEmail} className="text-black text-xl flex flex-col items-center justify-center gap-5">
-      <div className="flex flex-col gap-1">
-        <label htmlFor="name">Name</label>
-        <input type="text" className="w-72 border-2" name="name" id="name"/>
-      </div>
-      <div className="flex flex-col gap-1">
-        <label htmlFor="email">Email</label>
-        <input type="email" name="email" id="email" className="w-72 border-2"/>
-      </div>
-      <div className="flex flex-col gap-1">
-        <label htmlFor="message">Message</label>
-        <textarea name="message" id="message" className="w-72 border-2"></textarea>
-      </div>
-      <div className="flex flex-col gap-1 mb-10">
-        <button className="py-2 px-4 bg-cyan-700 text-slate-800">Send Message</button>
-      </div>
-  </form>
-    </>
-)
+      <form action={sendEmail} className='w-full shadow-md py-3 px-2'>
+          <div>
+              <label htmlFor="name">Name:</label>
+              <input type="text" name="name" id="name" />
+          </div>
+          <div>
+              <label htmlFor="email">Email:</label>
+              <input type="email" name="email" id="email" />
+          </div>
+          <div>
+              <label htmlFor="phone">Phone Number:</label>
+              <input type="tel" name="Phone" id="phone" />
+          </div>
+          <div>
+              <label htmlFor="topic">Topic:</label>
+              <select name="topic" id="topic">
+                  <option value="new web">Request a cuote for Website</option>
+                  <option value="new app">Request a cuote for Mobile App</option>
+                  <option value="new software">Request a cuote for Custom Software</option>
+              </select>
+          </div>
+          <div>
+              <label htmlFor="message">Your Message:</label>
+              <textarea name="message" id="message"></textarea>
+          </div>
+          <div>
+              <input type="submit" value="Send Message" />
+            </div>
+    </form>
+  )
 }
 
-export default ContactForm;
+export default ContactForm
