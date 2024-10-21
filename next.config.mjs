@@ -8,7 +8,9 @@ const nextConfig = {
   i18n: {
     defaultLocale: 'en-US',
     locales:['en-US','es-CR']
-  }
+  },
+  compress: true,
+  
 }
  
 const withMDX = createMDX({
