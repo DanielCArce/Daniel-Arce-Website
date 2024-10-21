@@ -46,11 +46,11 @@ function MainMenu() {
         </li>
       </ul>
     </nav>
-    <nav className='sm:flex sm:flex md:hidden lg:hidden xl:hidden 2xl:hidden'>
+    <nav className='sm:flex sm:flex md:hidden lg:hidden xl:hidden 2xl:hidden relative'>
       <span onClick={handleMenuButton}>
         {isMenuOpen ? <FaAngleRight/> : <FaAngleLeft/>}
       </span>
-      { isMenuOpen ? (<ul className="flex flex-col w-1/2 justify-between items-center relative t-0 r-0 h-screen">
+      { isMenuOpen ? (<ul className="flex flex-col w-1/2 justify-between items-center absolute t-0 h-80">
         <li>
           <Link href={"/"}>
           Home

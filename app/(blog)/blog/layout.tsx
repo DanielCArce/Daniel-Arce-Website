@@ -3,6 +3,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
+import {GTAG_KEY} from '@/config/constants'
 import "@/app/globals.css";
 const font = Montserrat({ subsets: ['latin'] })
 
@@ -27,7 +28,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <GoogleTagManager gtmId="GTM-P8ZXV62T" />
+            <GoogleTagManager gtmId={GTAG_KEY} />
             <body className={`${font.className} bg-white text-gray-700`}>
                 <main className="px-4 pt-5">
                     {children}
