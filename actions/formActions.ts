@@ -1,15 +1,15 @@
 'use server';
-import { RESEND_KEY,CONTACT_EMAIL } from '@/config/constants'
+import { RESEND_KEY, CONTACT_EMAIL } from '@/config/constants'
 import {Resend} from 'resend'
 import {redirect, } from 'next/navigation'
-import EmailTemplate from '@/components/EmailTemplate';
+import EmailTemplate,{EmailTemplateProps} from '@/components/EmailTemplate';
 const resend = new Resend(RESEND_KEY)
 export async function sendEmail(formData: FormData) {
-    let name = formData.get('name')
-    let phone = formData.get('phone')
-    let email = formData.get('email')
-    let topic = formData.get('topic')
-    let message =formData.get('message')
+    let name = formData.get('name') as string;
+    let phone = formData.get('phone') as string;
+    let email = formData.get('email') as string;
+    let topic = formData.get('topic') as string;
+    let message = formData.get('message') as string;
 
 console.info({name,phone,email,topic,message, formData})
     const { data, error } = await resend.emails.send({
