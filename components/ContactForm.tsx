@@ -3,6 +3,8 @@ import {sendEmail} from '@/actions/formActions'
 
 function ContactForm() {
   return (
+      <>
+          <h2 className='text-3xl font-black my-4 text-center'>Contact</h2>
       <form action={sendEmail} className="w-full px-9">
           <div className="flex flex-col gap-2 mb-4">
               <label htmlFor="name">Name:</label>
@@ -32,6 +34,7 @@ function ContactForm() {
               <input type="submit" value="Send Message" className=" py-4 px-2 bg-cyan-800 text-white hover:bg-cyan-600 w-1/3"/>
             </div>
     </form>
+    </>
   )
 }
 
