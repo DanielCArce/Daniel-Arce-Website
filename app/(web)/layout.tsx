@@ -25,9 +25,9 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <GoogleTagManager gtmId={ GTAG_KEY} />
+            <GoogleTagManager gtmId={GTAG_KEY} />
             <body className={`${font.className} bg-white text-black`}>
-                <main className="px-4 pt-5">
+                <main>
                     {children}
                 </main>
                 <SpeedInsights />
