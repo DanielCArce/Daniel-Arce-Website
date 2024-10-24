@@ -1,4 +1,5 @@
 import PageHeader from '@/components/PageHeader'
+import Wrapper from '@/components/Wrapper'
 import ContactSection from '@/sections/ContactSection'
 import HeroSection from '@/sections/HeroSection'
 import ProjectsSection from '@/sections/ProjectsSection'
@@ -8,8 +9,12 @@ import React from 'react'
 function page() {
   return (
     <>
-    <PageHeader/>
-      <HeroSection />
+      <Wrapper>
+        <>
+          <PageHeader />
+          <HeroSection />
+        </>
+      </Wrapper>
       <ProjectsSection />
       <ServicesSection />
       <ContactSection/>
