@@ -16,6 +16,12 @@ const config: Config = {
       },
       screens: {
         'xsm':'393'
+      },
+      colors: {
+        'primary': '#358df9',
+        'secondary': '#5e69ee',
+        'accent': '#39AFEA',
+        'neutral':'#F4F4FB'
       }
     },
   },
