@@ -25,12 +25,26 @@ const allProjects: ProjectCardProps[] = [
       jpg: '/AppDev.jpg',
       alt:'Distribuidora Catalina Website'
     }
+  },{
+    id: 3,
+    name: "Payroll System",
+    type: "Website",
+    description: "Payroll Webapp system for companies that need a system with auto-gestion.",
+    links: '/blog/distribuidora-catalina',
+    imgs: {
+      webp: '/AppDev.webp',
+      jpg: '/AppDev.jpg',
+      alt:'Payroll System Webapp'
+    }
   }
 ]
 function ProjectsSection() {
   return (
-    <section id="projects" className="flex flex-row gap-2 h-screen container justify-between px-5 py-5">
+    <section id="projects" className='px-5 py-5'>
+      <h2 className='mb-3 text-2xl font-semibold'>Recents Projects</h2>
+    <section className="flex flex-col items-center md:flex-row xl:flex-row gap-2 h-screen container justify-between">
       {allProjects.map((project) => <ProjectCard key={ project.id} description={project.description} name={project.name} type={project.type} links={project.links} imgs={project.imgs}/>)}
+    </section>
     </section>
   )
 }

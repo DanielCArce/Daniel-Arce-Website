@@ -9,20 +9,6 @@ interface BlogPageParams {
     }
 }
 const mdxComponents = { h1:H1, h2:H2, h3:H3, p:P, li:LI, ul:UL }
-// export async function getStaticPaths() {
-//     const allFiles = await getAllFiles();
-//     const paths = allFiles.map((route) => {
-//         return {
-//             params: {
-//                 slug: route.slug
-//             }
-//         }
-//     });
-//     return {
-//         paths,
-//         fallback:false
-//     }
-// }
 
 export async function generateStaticParams() {
     const allPosts = await getAllFiles();
