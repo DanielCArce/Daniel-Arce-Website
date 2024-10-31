@@ -2,7 +2,7 @@
 import { RESEND_KEY, CONTACT_EMAIL } from '@/config/constants'
 import {Resend} from 'resend'
 import {redirect, } from 'next/navigation'
-import EmailTemplate,{EmailTemplateProps} from '@/components/EmailTemplate';
+import EmailTemplate from '@/components/EmailTemplate';
 const resend = new Resend(RESEND_KEY)
 export async function sendEmail(formData: FormData) {
     let name = formData.get('name') as string;

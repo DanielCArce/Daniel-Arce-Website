@@ -1,11 +1,6 @@
+import { EmailTemplateProps } from '@/types/types'
 import React from 'react'
-export interface EmailTemplateProps {
-    name: string;
-    phone: string;
-    email: string;
-    topic: string;
-    message: string;
-}
+
 function EmailTemplate({name,topic, email,message, phone}:EmailTemplateProps) {
   return (
       <div>

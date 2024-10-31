@@ -16,6 +16,11 @@ export const metadata: Metadata = {
         card: "summary"
     },
     keywords: ["Software Development", "Website builder", "Software as Service", "Development Custom Software"],
+    icons: {
+        apple: '/Logo_34.png',
+        other: '/Logo_34.png',
+        shortcut:'/Logo_34.png'
+    }
 };
 
 export default function RootLayout({
@@ -26,7 +31,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <GoogleTagManager gtmId={GTAG_KEY} />
-            <body className={`${font.className} bg-white text-black`}>
+            <body className={`${font.className} bg-neutral text-black`}>
                 <main>
                     {children}
                 </main>

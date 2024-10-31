@@ -8,7 +8,7 @@ interface BlogPageParams {
             slug: string
     }
 }
-const mdxComponents = { h1:H1, h2:H2, h3:H3, p:P, li:LI, ul:UL }
+const mdxComponents = { h1:H1, h2:H2, h3:H3, p:P, li:LI, ul:UL}
 
 export async function generateStaticParams() {
     const allPosts = await getAllFiles();
