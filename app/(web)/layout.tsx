@@ -18,7 +18,6 @@ export const metadata: Metadata = {
     keywords: ["Software Development", "Website builder", "Software as Service", "Development Custom Software"],
     icons: {
         apple: '/Logo_34.png',
-        other: '/Logo_34.png',
         shortcut:'/Logo_34.png'
     }
 };

@@ -17,8 +17,10 @@ function page() {
       </Wrapper>
       <ProjectsSection />
       <Wrapper>
+        <>
         <ServicesSection />
         <ContactSection />
+        </>
       </Wrapper>
     </>
   )
