@@ -25,7 +25,6 @@ export async function getMetadataFromFile(file_name: string) {
         }
     });
     const source = src
-    console.log({file:source.frontmatter})
     return {
         metadata: source.frontmatter,
         slug: file_name

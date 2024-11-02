@@ -5,7 +5,6 @@ import PageHeader from '@/components/PageHeader'
 
 async function page() {
   const data = await getAllFiles()
-  console.log({dataFromPage:data})
   return (
     <main className="px-5 pt-7">
       <PageHeader/>

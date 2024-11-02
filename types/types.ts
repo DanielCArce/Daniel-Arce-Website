@@ -32,6 +32,9 @@ export interface ProjectCardProps {
         jpg: string;
         alt: string;
     }
-
-
+}
+export interface FormProps {
+    isError: boolean;
+    isCompleted: boolean;
+    message: string;
 }

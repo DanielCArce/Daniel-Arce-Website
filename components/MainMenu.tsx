@@ -8,7 +8,6 @@ function MainMenu() {
     setIsMenuOpen(false)
   }, [])
   const handleMenuButton = (e: any) => {
-    console.log({ev: e})
     setIsMenuOpen((prev) => !prev)
   }
   return (<>
