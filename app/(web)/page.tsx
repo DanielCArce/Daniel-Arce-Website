@@ -1,5 +1,6 @@
 import PageHeader from '@/components/PageHeader'
 import Wrapper from '@/components/Wrapper'
+import BioSection from '@/sections/BioSection'
 import ContactSection from '@/sections/ContactSection'
 import HeroSection from '@/sections/HeroSection'
 import ProjectsSection from '@/sections/ProjectsSection'
@@ -15,13 +16,10 @@ function page() {
           <HeroSection />
         </>
       </Wrapper>
+    <BioSection/>
       <ProjectsSection />
-      <Wrapper>
-        <>
         <ServicesSection />
         <ContactSection />
-        </>
-      </Wrapper>
     </>
   )
 }
