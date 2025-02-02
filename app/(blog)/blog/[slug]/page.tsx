@@ -4,9 +4,9 @@ import { MDXRemote } from 'next-mdx-remote/rsc'
 import React from 'react'
 import PageHeader from '@/components/PageHeader'
 interface BlogPageParams {
-    params:{
+    params: Promise<{
             slug: string
-    }
+    }>
 }
 const mdxComponents = { h1:H1, h2:H2, h3:H3, p:P, li:LI, ul:UL}
 
@@ -15,7 +15,8 @@ export async function generateStaticParams() {
     return allPosts
 }
 
-export async function generateMetadata({ params }: BlogPageParams) {
+export async function generateMetadata(props: BlogPageParams) {
+    const params = await props.params;
     const { metadata } = await getMetadataFromFile(params.slug)
     return {
         title: metadata.title,
@@ -23,7 +24,8 @@ export async function generateMetadata({ params }: BlogPageParams) {
         author:metadata.author
     }
 }
-async function page({params}: BlogPageParams) {
+async function page(props: BlogPageParams) {
+    const params = await props.params;
     const postSource = await readFile(params.slug)
     return (
         <>

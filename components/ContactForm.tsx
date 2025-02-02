@@ -1,7 +1,6 @@
 'use client'
-import React from 'react'
+import React, { useActionState } from 'react';
 import {sendEmail} from '@/actions/formActions'
-import { useFormState } from 'react-dom'
 import { FormProps } from '@/types/types'
 import Popup from './Popup'
 const initial_state:FormProps = {
@@ -11,7 +10,7 @@ const initial_state:FormProps = {
 
 }
 function ContactForm() {
-    const [state, formAction] = useFormState(sendEmail,initial_state)
+    const [state, formAction] = useActionState(sendEmail,initial_state)
   return (
       <>
       <form action={formAction} className="w-full px-9">
