@@ -1,7 +1,7 @@
 'use client'
 import React, { useLayoutEffect, useState } from 'react'
 import Link from 'next/link'
-import {FaAngleRight, FaAngleLeft} from 'react-icons/fa6'
+import {FaBars, FaXmark} from 'react-icons/fa6'
 function MainMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   useLayoutEffect(function () {
@@ -11,77 +11,26 @@ function MainMenu() {
     setIsMenuOpen((prev) => !prev)
   }
   return (<>
-    <nav className="hidden sm:hidden md:flex lg:flex xl:flex 2xl:flex">
-      <ul className="md:flex lg:flex xl:flex 2xl:flex flex-row gap-3 justify-between items-center">
-        <li>
-          <Link href={"/"}>
-          Home
-          </Link>
-          </li>
-        <li>
-          <Link href={"/#projects"}>
-            Projects
-          </Link>
-        </li>
-        <li>
-          <Link href={"/#services"}>
-            Services
-          </Link>
-        </li>
-        <li>
-          <Link href={"/#me"}>
-          About Me
-          </Link>
-        </li>
-        <li>
-          <Link href={"/#contact"}>
-          Contact
-          </Link>
-        </li>
-            <li>
-          <Link href="/blog">
-          Blog
-          </Link>
-        </li>
-      </ul>
-    </nav>
-    <nav className='sm:flex sm:flex md:hidden lg:hidden xl:hidden 2xl:hidden relative'>
-      <span onClick={handleMenuButton}>
-        {isMenuOpen ? <FaAngleRight/> : <FaAngleLeft/>}
+    <nav className="xl:hidden 2xl:hidden">
+      <span className='flex items-center justify-center'>
+        {isMenuOpen ? <FaXmark onClick={handleMenuButton} /> : <FaBars onClick={handleMenuButton} />}
       </span>
-      { isMenuOpen ? (<ul className="flex flex-col w-1/2 justify-between items-center absolute t-0 h-80">
-        <li>
-          <Link href={"/"}>
-          Home
-          </Link>
-          </li>
-        <li>
-          <Link href={"/#projects"}>
-            Projects
-          </Link>
-        </li>
-        <li>
-          <Link href={"/#services"}>
-            Services
-          </Link>
-        </li>
-        <li>
-          <Link href={"/#me"}>
-          About Me
-          </Link>
-        </li>
-        <li>
-          <Link href={"/#contact"}>
-          Contact
-          </Link>
-        </li>
-            <li>
-          <Link href="/blog">
-          Blog
-          </Link>
-        </li>
-      </ul>): null
-    }
+        <ul className={isMenuOpen ? 'flex flex-col xl:hidden 2xl:hidden' : 'hidden'}>
+          <li><Link className="block text-center" href='/'>Home</Link></li>
+          <li><Link className="block text-center" href='/#me'>About</Link></li>
+          <li><Link className="block text-center" href='/#services'>Services </Link> </li>
+        <li><Link className="block text-center" href='/#contact'>Contact</Link></li>
+        <li><Link className="block text-center" href='/blog'>Blog</Link></li>
+        </ul>
+    </nav>
+    <nav className="hidden xl:flex 2xl:flex">
+      <ul className="xl:flex 2xl:flex xl:flex-row 2xl:flex-row gap-3">
+        <li><Link className="block hover:border-b-2 hover:border-blue-800" href='/'>Home</Link></li>
+        <li><Link className="block hover:border-b-2 hover:border-blue-800" href='/#me'>About</Link></li>
+        <li><Link className="block hover:border-b-2 hover:border-blue-800" href='/#services'>Services</Link></li>
+        <li><Link className="block hover:border-b-2 hover:border-blue-800" href='/#contact'>Contact</Link></li>
+        <li><Link className="block text-center" href='/blog'>Blog</Link></li>
+      </ul>
     </nav>
     </>
   )

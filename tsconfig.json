@@ -40,7 +40,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "components/BlogCard.jsx"
-  ],
+, "postcss.config.mjs"  ],
   "exclude": [
     "node_modules"
   ]
