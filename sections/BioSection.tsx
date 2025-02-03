@@ -2,9 +2,9 @@ import React from 'react'
 
 function BioSection() {
   return (
-      <section id="me" className="px-2 md:px-7 my-6 w-screen">
-          <h3 className="text-2xl font-semibold mb-3">About Daniel</h3>
-          <div className="flex flex-col-reverse sm:flex-row md:flex-row lg:flex-row xl:flex-row gap-3 w-screen ">
+      <section id="me" className="px-2 md:px-7 my-10 w-screen py-6 bg-gray-800 text-white">
+          <h3 className="text-2xl font-semibold mb-3 text-center">About Daniel</h3>
+          <div className="flex flex-col-reverse items-center sm:flex-row md:flex-row lg:flex-row xl:flex-row gap-3 w-screen ">
           <div className="gap-3 flex flex-col w-screen md:w-1/2 lg:w-1/2 xl:w-1/2 text-sm md:text-base"> 
           <p className="break-words text-balance">I am a software developer passionate about technology and innovation. Since the age of 10, I discovered the world of programming while managing a fork of the game *Tales of Pirates I & II*, learning <span className="font-black">Lua</span> and <span className="font-black">PHP</span> self-taught. In 2012, I began my career in web development, honing my skills in various technologies.</p>
           <p>During my university years, I collaborated on academic projects, guiding my peers in solving complex tasks and ensuring the correct implementation of requirements.</p>

@@ -1,6 +1,8 @@
 import PageHeader from '@/components/PageHeader'
 import BioSection from '@/sections/BioSection'
 import HeroSection from '@/sections/HeroSection'
+import ServiceSection from '@/sections/ServiceSection'
+
 import React from 'react'
 
 function page() {
@@ -8,6 +10,7 @@ function page() {
     <>
       <PageHeader />
       <HeroSection />
+      <ServiceSection/>
       <BioSection />
   </>)
 }
