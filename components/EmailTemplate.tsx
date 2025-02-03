@@ -1,7 +1,7 @@
 import React from 'react'
 interface EmailTemplateProps {
     name: string,
-    phone: number,
+    phone: string,
     email: string,
     topic: string,
     message: string
