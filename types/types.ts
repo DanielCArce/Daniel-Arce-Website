@@ -37,4 +37,5 @@ export interface FormProps {
     isError: boolean;
     isCompleted: boolean;
     message: string;
+    errors: {};
 }
