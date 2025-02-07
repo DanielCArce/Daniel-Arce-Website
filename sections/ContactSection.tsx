@@ -20,33 +20,33 @@ function ContactSection() {
                 </li>
                 <li className="flex items-center">
                   <FaPhone className="mr-2 h-5 w-5 text-gray-400" />
-                  <span>(506) 6485-7937</span>
+                <Link href="https://wa.me/+50664857937"><span>(506) 6485-7937</span></Link>
                 </li>
                 <li className="flex items-center">
                   <FaEnvelope className="mr-2 h-5 w-5 text-gray-400" />
-                  <span>danarce.dev@gmail.com</span>
+                  <Link href="mailto:danarce.dev@gmail.com"><span>danarce.dev@gmail.com</span></Link>
                 </li>
               </ul>
             </div>
             <div>
               <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
               <div className="flex space-x-4">
-                <a href="https://linkedin.com/in/danielcarce" className="text-gray-400 hover:text-gray-500">
+                <Link href="https://linkedin.com/in/danielcarce" className="text-gray-400 hover:text-gray-500">
                   <span className="sr-only">Linkedin</span>
                   <FaLinkedin className="h-6 w-6" />
-                </a>
-                <a href="https://x.com/danielarcedev" className="text-gray-400 hover:text-gray-500">
+                </Link>
+                <Link href="https://x.com/danielarcedev" className="text-gray-400 hover:text-gray-500">
                   <span className="sr-only">Twitter</span>
                   <FaTwitter className="h-6 w-6" />
-                </a>
-                <a href="https://instagram.com/darcedev" className="text-gray-400 hover:text-gray-500">
+                </Link>
+                <Link href="https://instagram.com/darcedev" className="text-gray-400 hover:text-gray-500">
                   <span className="sr-only">Instagram</span>
                   <FaInstagram className="h-6 w-6" />
-                </a>
-                <a href="https://github.com/danielcarce" className="text-gray-400 hover:text-gray-500">
+                </Link>
+                <Link href="https://github.com/danielcarce" className="text-gray-400 hover:text-gray-500">
                   <span className="sr-only">Github</span>
                   <FaGithub className="h-6 w-6" />
-                </a>
+                </Link>
               </div>
       </div>
     </section>
