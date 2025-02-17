@@ -2,6 +2,7 @@ import { getAllFiles, getMetadataFromFile, readFile } from '@/libs/readMd'
 import {H1, H2, H3,P, LI, UL} from '@/components/mdx'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import React from 'react'
+import PageHeader from '@/components/PageHeader'
 interface BlogPageParams {
     params: Promise<{
             slug: string
@@ -28,6 +29,7 @@ async function page(props: BlogPageParams) {
     const postSource = await readFile(params.slug)
     return (
         <>
+        <PageHeader/>
             <section className='py-10 px-5'>
             <MDXRemote source={postSource} options={{ parseFrontmatter: true}} components={mdxComponents} />
             </section>

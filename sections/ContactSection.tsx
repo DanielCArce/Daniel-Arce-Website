@@ -27,7 +27,7 @@ function ContactSection() {
                   <Link href="mailto:danarce.dev@gmail.com"><span>danarce.dev@gmail.com</span></Link>
                 </li>
               </ul>
-            </div>
+      </div>
             <div>
               <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
               <div className="flex space-x-4">
