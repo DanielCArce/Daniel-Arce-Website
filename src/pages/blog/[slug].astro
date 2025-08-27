@@ -1,0 +1,32 @@
+---
+import Layout from "../../layouts/BlogPostLayout.astro";
+import { getCollection, render } from "astro:content";
+
+// getStaticPaths debe obtener los posts dentro de la función
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+  }));
+}
+
+// Aquí sí puedes usar Astro.params para obtener el slug
+const { slug } = Astro.params;
+
+// Obtener el post correspondiente al slug
+const posts = await getCollection("blog");
+const post = posts.find((p) => p.slug === slug);
+
+if (!post) {
+  throw new Error(`No post found for slug: ${slug}`);
+}
+
+// Renderizar el contenido
+const { Content, headings } = await render(post);
+---
+
+<Layout title={post.data.title} date={post.data.date} author={post.data.author}>
+<div class="prose">
+  <Content />
+</div>
+</Layout>
