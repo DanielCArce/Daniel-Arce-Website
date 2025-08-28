@@ -1,7 +1,7 @@
 ---
 import "../styles/global.css";
 import PageHeader from "../components/PageHeader.astro";
-const { title, date, author } = Astro.props;
+const { title, date, author, description } = Astro.props;
 ---
 <html lang="es">
   <head>
@@ -9,6 +9,7 @@ const { title, date, author } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
+    <meta name="description" content={description}/>
   </head>
   <body class="bg-gray-50 text-gray-900 font-sans">
 <PageHeader/>
