@@ -1,0 +1,50 @@
+---
+import { getCollection } from "astro:content";
+
+// obtener últimos 4 artículos ordenados por fecha
+const posts = (await getCollection("blog"))
+    .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+    .slice(0, 4);
+---
+
+<section class="w-full py-10 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6">Últimos artículos</h2>
+
+        <!-- grid de cards -->
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {
+                posts.map((post) => (
+                    <a
+                        href={`/blog/${post.slug}/`}
+                        class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1"
+                    >
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 line-clamp-2">
+                                {post.data.title}
+                            </h3>
+                            <p class="text-sm text-gray-500">
+                                {new Date(post.data.date).toLocaleDateString()}
+                            </p>
+                            {post.data.description && (
+                                <p class="mt-2 text-gray-600 text-sm line-clamp-3">
+                                    {post.data.description}
+                                </p>
+                            )}
+                        </div>
+                    </a>
+                ))
+            }
+        </div>
+
+        <!-- botón ver más -->
+        <div class="mt-8 flex justify-center">
+            <a
+                href="/blog/"
+                class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition shadow-md"
+            >
+                Ver más artículos
+            </a>
+        </div>
+    </div>
+</section>
