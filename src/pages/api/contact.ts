@@ -15,8 +15,8 @@ export const POST: APIRoute = async ({ request }) => {
     }
 
     await resend.emails.send({
-      from: "Contacto <no-reply@tu-dominio.com>",
-      to: "tucorreo@empresa.com", // donde recibís los mensajes
+      from: "Acme <onboarding@resend.dev>",
+      to: import.meta.env.EMAIL_FOR_CONTACT, // donde recibís los mensajes
       subject: `Nuevo mensaje de ${name}`,
       html: `
         <h2>Nuevo contacto desde la web</h2>
