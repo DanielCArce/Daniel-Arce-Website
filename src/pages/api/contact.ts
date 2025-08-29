@@ -1,6 +1,5 @@
 import type { APIRoute } from "astro";
-import { Resend } from "resend";
-const resend = new Resend(import.meta.env.RESEND_API_KEY);
+import nodemailer from "nodemailer";
 
 export const POST: APIRoute = async ({ request }) => {
   try {
@@ -10,12 +9,23 @@ export const POST: APIRoute = async ({ request }) => {
     const message = formData.get("message")?.toString() || "";
 
     if (!name || !email || !message) {
-      return new Response(JSON.stringify({ error: "Faltan campos" }), { status: 400 });
+      return new Response("Faltan campos", { status: 400 });
     }
 
-    await resend.emails.send({
-      from: "Acme <onboarding@resend.dev>",
-      to: import.meta.env.EMAIL_FOR_CONTACT, // donde recibís los mensajes
+    // 🚀 Configurar Nodemailer con Gmail
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: import.meta.env.GMAIL_USERNAME,
+        pass: import.meta.env.GMAIL_APP_PASSWORD,
+      },
+    });
+
+    // 🚀 Enviar email
+    await transporter.sendMail({
+      from: `"${name}" <${import.meta.env.GMAIL_USERNAME}>`,
+      to: [import.meta.env.GMAIL_USERNAME, email], // te lo mandás a vos mismo
+      replyTo: email, // así podés responderle directo al remitente
       subject: `Nuevo mensaje de ${name}`,
       html: `
         <h2>Nuevo contacto desde la web</h2>
@@ -25,11 +35,14 @@ export const POST: APIRoute = async ({ request }) => {
         <p>${message}</p>
       `,
     });
+
+    // 🚀 Redirigir al home
     return new Response(null, {
       status: 303,
-      headers: { Location: "/" } });
-  } catch (error) {
-    console.error(error);
-    return new Response(JSON.stringify({ error: "Error al enviar correo" }), { status: 500 });
+      headers: { Location: "/" },
+    });
+  } catch (err) {
+    console.error("❌ Error al enviar correo:", err);
+    return new Response("Error al enviar correo", { status: 500 });
   }
 };
