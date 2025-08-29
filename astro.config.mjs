@@ -4,6 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 import compression from 'vite-plugin-compression';
 // https://astro.build/config
 export default defineConfig({
+  output:'server',
   vite: {
     plugins: [tailwindcss(), compression({
         algorithm: "gzip",
