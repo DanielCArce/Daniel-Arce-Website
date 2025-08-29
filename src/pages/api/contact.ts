@@ -31,7 +31,7 @@ export const POST: APIRoute = async ({ request }) => {
         <h2>Nuevo contacto desde la web</h2>
         <p><strong>Nombre:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Mensaje:</strong></p>
+        <p><strong>Detalle del contacto:</strong></p>
         <p>${message}</p>
       `,
     });
