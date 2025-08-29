@@ -2,9 +2,11 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import compression from 'vite-plugin-compression';
+import vercel from '@astrojs/vercel/server';
 // https://astro.build/config
 export default defineConfig({
-  output:'server',
+  output: 'server',
+  adapter:vercel(),
   vite: {
     plugins: [tailwindcss(), compression({
         algorithm: "gzip",
