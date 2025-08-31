@@ -1,43 +1,29 @@
-# Astro Starter Kit: Minimal
+# 🌐 30th Opps Website
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Este es el repositorio oficial del sitio web de **30th Opps**, una empresa en Costa Rica especializada en **desarrollo de software, contabilidad y servicios financieros**.  
+El proyecto está construido con **[Astro](https://astro.build/)** y **[TailwindCSS](https://tailwindcss.com/)** para ofrecer un sitio rápido, moderno y optimizado para SEO.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+---
 
-## 🚀 Project Structure
+## 🚀 Tecnologías utilizadas
 
-Inside of your Astro project, you'll see the following folders and files:
+- ⚡ **Astro** → Framework moderno de frontend con renderizado híbrido (SSR/SSG).
+- 🎨 **TailwindCSS** → Framework de utilidades CSS para diseño responsivo y moderno.
+- 🗜 **Compresión Brotli & Gzip** → Para mejorar la velocidad de carga y optimización de recursos.
+- 🖼 **SVG en secciones** → Íconos y gráficos escalables y ligeros para secciones clave.
+- 📧 **Nodemailer** → Envío de correos desde formularios de contacto (backend simple).
+- 🌐 **SEO Optimizado** → Metadatos, Open Graph y Twitter Cards integrados.
 
-```text
-/
-├── public/
+---
+
+## 📂 Estructura del proyecto
+
+```bash
+├── public/              # Archivos estáticos (favicon, logo.svg, imágenes)
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+│   ├── components/      # Componentes reutilizables de Astro
+│   ├── layouts/         # Layouts principales (base, blog, etc.)
+│   ├── pages/           # Páginas del sitio (index, blog, contacto)
+│   └── styles/          # Estilos globales y Tailwind
+├── package.json
+└── astro.config.mjs
