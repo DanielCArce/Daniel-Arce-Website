@@ -6,6 +6,7 @@ export const POST: APIRoute = async ({ request }) => {
     const formData = await request.formData();
     const name = formData.get("name")?.toString() || "";
     const email = formData.get("email")?.toString() || "";
+    const subject = formData.get("subject")?.toString() || "";
     const message = formData.get("message")?.toString() || "";
 
     if (!name || !email || !message) {
@@ -26,11 +27,12 @@ export const POST: APIRoute = async ({ request }) => {
       from: `"${name}" <${import.meta.env.GMAIL_USERNAME}>`,
       to: [import.meta.env.GMAIL_USERNAME, email], // te lo mandás a vos mismo
       replyTo: email, // así podés responderle directo al remitente
-      subject: `Nuevo mensaje de ${name}`,
+      subject: `Nuevo mensaje de ${name} para [${subject}]`,
       html: `
         <h2>Nuevo contacto desde la web</h2>
         <p><strong>Nombre:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Asunto:</strong> ${subject}</p>
         <p><strong>Detalle del contacto:</strong></p>
         <p>${message}</p>
       `,

@@ -4,7 +4,9 @@
   class="bg-white rounded-xl shadow-lg p-6 space-y-4"
 >
   <div>
-    <label for="name" class="block text-sm font-medium text-gray-700">Nombre</label>
+    <label for="name" class="block text-sm font-medium text-gray-700"
+      >Nombre</label
+    >
     <input
       type="text"
       name="name"
@@ -15,7 +17,9 @@
   </div>
 
   <div>
-    <label for="email" class="block text-sm font-medium text-gray-700">Correo</label>
+    <label for="email" class="block text-sm font-medium text-gray-700"
+      >Correo</label
+    >
     <input
       type="email"
       name="email"
@@ -26,7 +30,42 @@
   </div>
 
   <div>
-    <label for="message" class="block text-sm font-medium text-gray-700">Mensaje</label>
+    <label for="subject" class="block text-sm font-medium text-gray-700"
+      >Asunto</label
+    >
+    <select
+      id="subject"
+      name="subject"
+      required
+      class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
+    >
+      <option value="">Seleccione una opción</option>
+
+      <optgroup label="Servicios de Desarrollo">
+        <option value="WebDev">Cotización Sitio Web Empresarial</option>
+        <option value="Ecommerce">Desarrollo de Tienda en Línea</option>
+        <option value="MobileApp">Cotización Aplicación Móvil</option>
+        <option value="Maintenance"
+          >Mantenimiento / Actualización de Sistemas</option
+        >
+      </optgroup>
+
+      <optgroup label="Servicios Financieros & Contables">
+        <option value="FinancialConsulting">Asesoría Financiera</option>
+        <option value="AccountingConsulting">Asesoría Contable</option>
+        <option value="Payroll">Implementación de Sistema de Nómina</option>
+      </optgroup>
+
+      <optgroup label="Otros">
+        <option value="Other">Otro (especifique en el mensaje)</option>
+      </optgroup>
+    </select>
+  </div>
+
+  <div>
+    <label for="message" class="block text-sm font-medium text-gray-700"
+      >Mensaje</label
+    >
     <textarea
       name="message"
       id="message"
