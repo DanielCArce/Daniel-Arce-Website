@@ -3,6 +3,8 @@ title: "Beneficios que tienen las PYMES en Costa Rica"
 date: 2025-08-27
 description: "Descubre los principales beneficios y oportunidades que las pequeñas y medianas empresas (PYMES) pueden aprovechar en Costa Rica."
 author: "Daniel C. Arce"
+keywords: ["beneficios PYMES Costa Rica","apoyo a PYMES en Costa Rica", "programas de financiamiento para PYMES","incentivos fiscales PYMES Costa Rica","digitalización de PYMES en Costa Rica","crecimiento empresarial PYMES","oportunidades para PYMES en Costa Rica","subsidios y programas para PYMES","capacitación empresarial Costa Rica","consultoría contable y financiera para PYMES"]
+
 ---
 
 Las **pequeñas y medianas empresas (PYMES)** representan una parte fundamental de la economía en Costa Rica.  

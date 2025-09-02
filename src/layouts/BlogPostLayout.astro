@@ -2,7 +2,7 @@
 import "../styles/global.css";
 import PageHeader from "../components/PageHeader.astro";
 import FooterSection from '../components/FooterSection.astro';
-const { title, date, author, description } = Astro.props;
+const { title, date, author, description, keywords } = Astro.props;
 ---
 <html lang="es">
   <head>
@@ -11,8 +11,7 @@ const { title, date, author, description } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
     <meta name="description" content={description}/>
-    <meta name="description" content="30th Opps ofrece desarrollo de software, contabilidad y servicios financieros en Costa Rica. Soluciones innovadoras para tu negocio.">
-    <meta name="keywords" content="30th Opps, software, contabilidad, finanzas, Costa Rica, desarrollo de software, servicios financieros, soluciones tecnológicas"/>
+    <meta name="keywords" content={keywords.join()}/>
 
 <!-- Open Graph / Facebook / LinkedIn -->
 <meta property="og:type" content="website">

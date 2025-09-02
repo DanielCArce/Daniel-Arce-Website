@@ -3,6 +3,7 @@ title: "Optimización Financiera en PYMES de Costa Rica: El Pilar para el Crecim
 author: "Daniel Campos Arce"
 date: 2025-08-25
 description: "Descubre cómo una gestión financiera eficiente puede transformar tu micro, pequeña o mediana empresa en el mercado costarricense."
+keywords: ["optimización financiera", "PYMES Costa Rica", "crecimiento sostenible", "gestión financiera", "flujo de caja", "control de costos", "finanzas empresariales"]
 ---
 ## El Desafío de Crecer en el Mercado Costarricense
 
