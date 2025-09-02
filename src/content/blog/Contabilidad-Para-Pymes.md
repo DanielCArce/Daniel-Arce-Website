@@ -7,11 +7,10 @@ keywords: ["beneficios PYMES Costa Rica","apoyo a PYMES en Costa Rica", "program
 
 ---
 
-Las **pequeñas y medianas empresas (PYMES)** representan una parte fundamental de la economía en Costa Rica.  
+Las **pequeñas y medianas empresas (PYMES)** representan una parte fundamental de la economía en Costa Rica.
 De hecho, según datos del Ministerio de Economía, Industria y Comercio (MEIC), más del 90% de las empresas del país pertenecen a este sector.
 
 En este artículo te contamos los **principales beneficios** que las PYMES pueden aprovechar en Costa Rica:
-
 ---
 
 ## 1. Acceso a financiamiento especializado
