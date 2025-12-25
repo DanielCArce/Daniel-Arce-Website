@@ -1,3 +1,6 @@
+---
+import { Image } from 'astro:assets';
+---
 <section class="relative pt-20 pb-16 lg:pt-32 lg:pb-24 bg-white overflow-hidden">
   <div class="absolute inset-0 z-0 opacity-30 [background-image:radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px]"></div>
 
@@ -45,11 +48,7 @@
           <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-blue-100 rounded-full blur-3xl opacity-50"></div>
           
           <div class="relative bg-white border border-slate-100 p-4 rounded-[2.5rem] shadow-2xl">
-            <img 
-              src="/tu-foto-profesional.jpg" 
-              alt="Daniel Campos Arce" 
-              class="rounded-[2rem] w-full object-cover grayscale hover:grayscale-0 transition-all duration-700 aspect-[4/5]"
-            />
+            <Image src="/images/Daniel_Photo.webp" class="rounded-[2rem] w-full object-cover grayscale hover:grayscale-0 transition-all duration-700 aspect-[4/5]"   alt="Foto de Daniel Campos Arce" width={500} height={625} />
             
             <div class="absolute bottom-10 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-slate-50 flex items-center gap-4 animate-bounce-slow">
               <div class="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-white">
