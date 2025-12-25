@@ -1,84 +1,94 @@
-<form
-  method="POST"
-  action="/api/contact"
-  class="bg-white rounded-xl shadow-lg p-6 space-y-4"
->
-  <div>
-    <label for="name" class="block text-sm font-medium text-gray-700"
-      >Nombre</label
-    >
-    <input
-      type="text"
-      name="name"
-      id="name"
-      required
-      class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
-    />
-  </div>
-
-  <div>
-    <label for="email" class="block text-sm font-medium text-gray-700"
-      >Correo</label
-    >
-    <input
-      type="email"
-      name="email"
-      id="email"
-      required
-      class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
-    />
-  </div>
-
-  <div>
-    <label for="subject" class="block text-sm font-medium text-gray-700"
-      >Asunto</label
-    >
-    <select
-      id="subject"
-      name="subject"
-      required
-      class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
-    >
-      <option value="">Seleccione una opción</option>
-
-      <optgroup label="Servicios de Desarrollo">
-        <option value="WebDev">Cotización Sitio Web Empresarial</option>
-        <option value="Ecommerce">Desarrollo de Tienda en Línea</option>
-        <option value="MobileApp">Cotización Aplicación Móvil</option>
-        <option value="Maintenance"
-          >Mantenimiento / Actualización de Sistemas</option
-        >
-      </optgroup>
-
-      <optgroup label="Servicios Financieros & Contables">
-        <option value="FinancialConsulting">Asesoría Financiera</option>
-        <option value="AccountingConsulting">Asesoría Contable</option>
-        <option value="Payroll">Implementación de Sistema de Nómina</option>
-      </optgroup>
-
-      <optgroup label="Otros">
-        <option value="Other">Otro (especifique en el mensaje)</option>
-      </optgroup>
-    </select>
-  </div>
-
-  <div>
-    <label for="message" class="block text-sm font-medium text-gray-700"
-      >Mensaje</label
-    >
-    <textarea
-      name="message"
-      id="message"
-      rows="4"
-      required
-      class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
-    ></textarea>
-  </div>
-
-  <button
-    type="submit"
-    class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition"
+<div class="max-w-xl mx-auto">
+  <form
+    method="POST"
+    action="/api/contact"
+    class="bg-white rounded-[2rem] shadow-2xl shadow-slate-200/60 p-8 md:p-10 border border-slate-100 space-y-6"
   >
-    Enviar mensaje
-  </button>
-</form>
+    <div class="mb-8">
+      <h3 class="text-2xl font-bold text-slate-900">Iniciemos un proyecto</h3>
+      <p class="text-slate-500 text-sm">Cuéntame tu necesidad y te responderé con una propuesta precisa.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="space-y-2">
+        <label for="name" class="block text-xs font-bold uppercase tracking-wider text-slate-700 ml-1">Nombre</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Juan Pérez"
+          required
+          class="block w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 text-sm transition-all focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 focus:bg-white"
+        />
+      </div>
+
+      <div class="space-y-2">
+        <label for="email" class="block text-xs font-bold uppercase tracking-wider text-slate-700 ml-1">Correo</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="juan@empresa.com"
+          required
+          class="block w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 text-sm transition-all focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 focus:bg-white"
+        />
+      </div>
+    </div>
+
+    <div class="space-y-2">
+      <label for="subject" class="block text-xs font-bold uppercase tracking-wider text-slate-700 ml-1">¿En qué puedo ayudarte?</label>
+      <div class="relative">
+        <select
+          id="subject"
+          name="subject"
+          required
+          class="appearance-none block w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 text-sm transition-all focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 focus:bg-white"
+        >
+          <option value="" disabled selected>Seleccione una especialidad</option>
+          <optgroup label="💻 Desarrollo de Software">
+            <option value="WebDev">Corporate Website</option>
+            <option value="MobileApp">Aplicación Móvil (iOS/Android)</option>
+            <option value="Maintenance">Mantenimiento de Sistemas</option>
+          </optgroup>
+          <optgroup label="📊 Contabilidad & Finanzas">
+            <option value="FullService">Gestión Contable Mensual</option>
+            <option value="Taxes">Declaración de Impuestos / Renta</option>
+            <option value="Hybrid">Solución Híbrida (Software + Finanzas)</option>
+          </div>
+        </select>
+        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-slate-400">
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="space-y-2">
+      <label for="message" class="block text-xs font-bold uppercase tracking-wider text-slate-700 ml-1">Detalles del proyecto</label>
+      <textarea
+        name="message"
+        id="message"
+        rows="4"
+        placeholder="Describa brevemente su necesidad..."
+        required
+        class="block w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 text-sm transition-all focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 focus:bg-white resize-none"
+      ></textarea>
+    </div>
+
+    <button
+      type="submit"
+      class="relative group w-full bg-slate-900 text-white font-bold py-4 px-6 rounded-xl overflow-hidden transition-all hover:bg-slate-800 active:scale-[0.98]"
+    >
+      <span class="relative z-10 flex items-center justify-center gap-2">
+        Enviar Mensaje
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+      </span>
+      <div class="absolute inset-0 bg-gradient-to-r from-emerald-600 to-blue-600 opacity-0 group-hover:opacity-10 transition-opacity"></div>
+    </button>
+    
+    <p class="text-center text-[10px] text-slate-400 uppercase tracking-widest font-medium">
+      Respuesta garantizada en menos de 24 horas
+    </p>
+  </form>
+</div>

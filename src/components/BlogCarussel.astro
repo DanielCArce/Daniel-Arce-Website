@@ -3,8 +3,7 @@ import { getCollection } from "astro:content";
 
 // Obtener últimos 4 artículos ordenados por fecha
 const posts = (await getCollection("blog"))
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0, 4);
+
 ---
 
 <section class="w-full py-24 bg-white">

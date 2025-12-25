@@ -2,11 +2,45 @@
 import SocialWidget from "./SocialWidget.astro";
 ---
 
-<footer class="bg-blue-400 shadow mt-12">
-      <div
-        class="flex flex-col md:flex-row items-center gap-2 justify-between max-w-7xl mx-auto px-6 py-6 text-center text-gray-500 text-sm"
-      >
-        &copy; {new Date().getFullYear()} 30th Opps Blog. Todos los derechos reservados.
-        <SocialWidget/>
+<footer class="relative bg-slate-900 pt-16 pb-8 overflow-hidden">
+  <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent"></div>
+
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-12 mb-12">
+      
+      <div class="flex flex-col items-center md:items-start space-y-4">
+        <a href="/" class="flex items-center gap-2 group">
+          <div class="w-8 h-8 bg-emerald-600 text-white rounded-lg flex items-center justify-center font-black text-lg group-hover:bg-white group-hover:text-emerald-600 transition-all duration-300">
+            D
+          </div>
+          <span class="font-bold text-xl tracking-tighter text-white">
+            Daniel<span class="text-emerald-500">CArce</span>
+          </span>
+        </a>
+        <p class="text-slate-400 text-sm max-w-xs text-center md:text-left leading-relaxed">
+          Fusionando la lógica del software con la precisión financiera para potenciar negocios en Costa Rica.
+        </p>
       </div>
-    </footer>
+
+      <div class="flex flex-col items-center md:items-end space-y-6">
+        <div class="flex gap-8 text-slate-300 font-medium text-sm">
+           <a href="/#servicios" class="hover:text-emerald-500 transition-colors">Servicios</a>
+           <a href="/blog" class="hover:text-emerald-500 transition-colors">Blog</a>
+           <a href="/#contacto" class="hover:text-emerald-500 transition-colors">Contacto</a>
+        </div>
+        <div class="bg-slate-800/50 p-3 rounded-2xl border border-slate-700/50">
+            <SocialWidget />
+        </div>
+      </div>
+    </div>
+
+    <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-[11px] uppercase tracking-[0.2em] font-medium">
+      <p>
+        &copy; {new Date().getFullYear()} Daniel Campos Arce. All rights reserved.
+      </p>
+      <p class="flex items-center gap-2">
+        Diseñado con <span class="text-emerald-500 text-base">♥</span> y Astro
+      </p>
+    </div>
+  </div>
+</footer>
