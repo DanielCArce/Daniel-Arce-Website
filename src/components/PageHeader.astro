@@ -8,7 +8,7 @@ interface Props {
 
 const {
     logoSrc = "/logo.png",
-    companyName = "30th Opps",
+    companyName = "Daniel Campos Arce",
     currentPath = "/",
 } = Astro.props;
 
@@ -27,11 +27,6 @@ const nav = [
         <div class="flex h-20 items-center justify-between">
             <!-- Logo + Nombre -->
             <a href="/" class="flex items-center gap-4">
-                <img
-                    src={logoSrc}
-                    alt="Logo {companyName}"
-                    class="h-10 w-10 rounded-2xl object-contain shadow-md"
-                />
                 <span
                     class="font-extrabold text-2xl tracking-tight text-indigo-700 dark:text-indigo-300"
                 >

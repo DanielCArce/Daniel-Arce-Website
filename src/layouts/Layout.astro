@@ -1,5 +1,4 @@
 ---
-const { title } = Astro.props;
 import PageHeader from "../components/PageHeader.astro";
 import FooterSection from '../components/FooterSection.astro';
 ---
@@ -8,48 +7,47 @@ import FooterSection from '../components/FooterSection.astro';
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title ? `${title} | 30th Opps` : "30th Oppps"}</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <title>Daniel Arce  - Accoutant & Fullstack Developer</title>
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" />
     <meta
       name="title"
-      content="30th Opps - Innovación en Software, Contabilidad y Finanzas"
+      content="Daniel C. Arce - Accountant & Fullstack Developer"
     />
-    <meta name="description" content="30th Opps ofrece desarrollo de software, contabilidad y servicios financieros en Costa Rica. Soluciones innovadoras para tu negocio."/>
-    <meta name="keywords" content="30th Opps, software, contabilidad, finanzas, Costa Rica, desarrollo de software, servicios financieros, soluciones tecnológicas"
+    <meta name="description" content="Daniel C. Arce es un desarrollador de software fullstack y contador privado especializado en resolución problemas."/>
+    <meta name="keywords" content="contador, desarrollador de software, fullstack, finanzas, contabilidad, desarrollo web, aplicaciones móviles, soluciones tecnológicas"
     />
 
     <!-- Open Graph / Facebook / LinkedIn -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.30thopps.com/" />
+    <meta property="og:url" content="https://www.danielcarce.com/" />
     <meta
       property="og:title"
-      content="30th Opps - Innovación en Software, Contabilidad y Finanzas"
+      content="Daniel C. Arce - Accountant & Fullstack Developer"
     />
     <meta
       property="og:description"
-      content="30th Opps ofrece desarrollo de software, contabilidad y servicios financieros en Costa Rica. Soluciones innovadoras para tu negocio."
+      content="Daniel C. Arce es un desarrollador de software fullstack y contador privado especializado en resolución problemas."
     />
-    <meta property="og:image" content="https://darce.vercel.app/og-image.png" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://www.30thopps.com/" />
+    <meta name="twitter:url" content="https://www.danielcarce.com/" />
     <meta
       name="twitter:title"
-      content="30th Opps - Innovación en Software, Contabilidad y Finanzas"
+      content="Daniel C. Arce - Accountant & Fullstack Developer"
     />
     <meta
       name="twitter:description"
-      content="30th Opps ofrece desarrollo de software, contabilidad y servicios financieros en Costa Rica. Soluciones innovadoras para tu negocio."
+      content="Daniel C. Arce es un desarrollador de software fullstack y contador privado especializado en resolución problemas."
     />
     <meta
       name="twitter:image"
-      content="https://darce.vercel.app/og-image.png"
+      content="https://danielcarce.com/og-image.png"
     />
     
   </head>
   <body>
-    <PageHeader companyName="30th Opps" />
+    <PageHeader companyName="Daniel C. Arce" />
     <main>
       <slot />
       <!-- your content is injected here -->
