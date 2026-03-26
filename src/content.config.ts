@@ -1,9 +1,13 @@
-// src/content/config.ts
-import { defineCollection, z } from "astro:content";
+import { defineCollection, z } from 'astro:content';
+import { glob } from 'astro/loaders';
 
-// Definimos la colección "blog"
+// Definimos la colección "blog" usando el Content Layer API
 const blogCollection = defineCollection({
-    type: "content", // "content" para Markdown/MDX
+    // Eliminamos 'type: "content"' y usamos el loader:
+    loader: glob({
+        pattern: "**/*.{md,mdx}",
+        base: "./src/content/blog"
+    }),
     schema: z.object({
         title: z.string(),       // título obligatorio
         date: z.date(),          // fecha obligatoria
@@ -18,4 +22,3 @@ const blogCollection = defineCollection({
 export const collections = {
     blog: blogCollection,
 };
-
