@@ -14,7 +14,8 @@ const blogCollection = defineCollection({
         author: z.string().optional(),
         description: z.string().optional(),
         keywords: z.array(z.string()),
-        category: z.string().optional()
+        category: z.string().optional(),
+        slug: z.string()
     }),
 });
 

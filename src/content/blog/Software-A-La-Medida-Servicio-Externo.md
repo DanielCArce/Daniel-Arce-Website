@@ -5,6 +5,7 @@ author: "Daniel C. Arce"
 description: "Análisis estratégico para pymes: ¿Cuándo conviene desarrollar software propio y cuándo pagar una suscripción?"
 keywords: ["pymes", "pymescr", "crecer como pyme", "software a la medida", "SaaS Costa Rica"]
 category: "Articulo de Contabilidad"
+slug: "Software-A-La-Medida-O-Software-Como-Servicio"
 ---
 
 # ¿Realmente necesito Software a la medida o Servicio por una suscripción?

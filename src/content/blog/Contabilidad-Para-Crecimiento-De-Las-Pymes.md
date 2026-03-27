@@ -5,6 +5,7 @@ author: "Daniel C. Arce"
 description: "Como llevar la contabilidad de una pymes para poder crecer"
 keywords: ["pymes","pymescr","crecer como pyme"]
 category: "Articulo de Contabilidad"
+slug: "Contabilidad-Para-Pymes"
 ---
 
 # 🇨🇷 ¿Tu Pyme es realmente rentable? Por qué la contabilidad es tu mejor aliada en Costa Rica

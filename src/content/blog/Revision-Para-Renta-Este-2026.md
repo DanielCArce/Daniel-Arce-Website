@@ -5,6 +5,7 @@ author: "Daniel C. Arce"
 description: "Que no se te quede ningun gasto afuera"
 keywords: ["pymes","pymescr","crecer como pyme","Impuesto de Renta 2025","Como declarar Renta en Costa Rica"]
 category: "Articulo de Contabilidad"
+slug: "Detalles-Para-Renta-Costa-Rica-2026"
 ---
 
 # ¿Qué verificar antes de Declarar Renta este 2026?

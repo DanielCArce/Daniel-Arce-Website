@@ -7,7 +7,7 @@ import { getCollection, render } from "astro:content";
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
   return posts.map((post) => ({
-    params: { slug: post.slug },
+    params: { slug: post.data.slug },
   }));
 }
 
@@ -16,14 +16,14 @@ const { slug } = Astro.params;
 
 // Obtener el post correspondiente al slug
 const posts = await getCollection("blog");
-const post = posts.find((p) => p.slug === slug);
-
+const post = posts.find((p) => p.data.slug === slug);
+console.log({posts})
 if (!post) {
   throw new Error(`No post found for slug: ${slug}`);
 }
 
 // Renderizar el contenido
-const { Content, headings } = await render(post);
+const { Content } = await render(post);
 ---
 
 <Layout title={post.data.title} date={post.data.date} author={post.data.author} description={post.data.description} keywords={post.data.keywords}>
