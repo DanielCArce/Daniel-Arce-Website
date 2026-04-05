@@ -72,17 +72,8 @@ const { title = "Blog" } = Astro.props;
     >
     <!-- End Google Tag Manager (noscript) -->
 <PageHeader />
-    <main class="max-w-7xl mx-auto px-6 py-12">
-      <section class="text-center mb-12">
-        <h2 class="text-4xl font-bold text-gray-900 mb-4">Bienvenido a nuestro Blog</h2>
-        <p class="text-gray-600 text-lg max-w-2xl mx-auto">
-          Tips y estrategias en tecnología y contabilidad.
-        </p>
-      </section>
-
-      <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <slot />
-      </section>
+    <main>
+      <slot />
     </main>
 <FooterSection/>
   </body>
