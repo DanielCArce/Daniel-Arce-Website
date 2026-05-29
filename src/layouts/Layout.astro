@@ -1,13 +1,76 @@
 ---
 import PageHeader from "../components/PageHeader.astro";
 import FooterSection from "../components/FooterSection.astro";
+
+// Dentro de tu Layout de Astro
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://www.danielcarce.com/#person",
+      "name": "Daniel Arce",
+      "url": "https://www.danielcarce.com",
+      // Mezclamos roles en inglés y español para máxima cobertura
+      "jobTitle": [
+        "Senior Software Engineer", 
+        "Contador Privado", 
+        "Accountant", 
+        "Desarrollador de Software"
+      ],
+      "description": "Consultor integral para PYMES en Costa Rica. Especialista en la intersección de tecnología avanzada y precisión contable.",
+      "sameAs": [
+        "https://www.instagram.com/30thopps"
+      ],
+      // Aquí listamos tus "entidades" de conocimiento
+      "knowsAbout": [
+        "Desarrollo de Software a Medida",
+        "Contabilidad Financiera",
+        "Contabilidad Gerencial",
+        "Asesoría y Planificación Fiscal",
+        "Automatización de Procesos (BPA)",
+        "Integración de Sistemas",
+        "Apps Móviles y de Escritorio",
+        "Auditoría Interna de Procesos",
+        "Transformación Digital",
+        ".NET 10",
+        "C#",
+        "SQL Server Optimization"
+      ]
+    },
+    {
+      "@type": "ProfessionalService",
+      "name": "30th Opps",
+      "url": "https://www.danielcarce.com",
+      "image": "https://danielcarce.com/og-image.png",
+      "founder": { "@id": "https://www.danielcarce.com/#person" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Heredia",
+        "addressRegion": "Heredia",
+        "addressCountry": "CR"
+      },
+      "offers": [
+        {
+          "@type": "Service",
+          "name": "Desarrollo de Software y Apps"
+        },
+        {
+          "@type": "Service",
+          "name": "Consultoría Contable y Fiscal"
+        }
+      ]
+    }
+  ]
+};
 ---
 
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Daniel C. Arce - Contador & Desarrollador de Software</title>
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    <title>Daniel Arce | Soluciones Contables Financieras y de Software Para Pymes</title>
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
@@ -25,15 +88,15 @@ import FooterSection from "../components/FooterSection.astro";
     <link rel="icon" type="image/png" href="/favicon-32x32.png" />
     <meta
       name="title"
-      content="Daniel C. Arce - Accountant & Fullstack Developer"
+      content="Daniel Arce | Soluciones Contables Financieras y de Software Para Pymes"
     />
     <meta
       name="description"
-      content="Daniel C. Arce es un desarrollador de software fullstack y contador privado especializado en resolución problemas."
+      content="Soluciones Integrales en Contabilidad Financiera y  Software Para Pymes de Costa Rica"
     />
     <meta
       name="keywords"
-      content="contador, desarrollador de software, fullstack, finanzas, contabilidad, desarrollo web, aplicaciones móviles, soluciones tecnológicas"
+      content="contador, desarrollador de sotware en costa rica, fullstack developer, contador en heredia, sitio web, website, aplicaciones moviles, mobile apps, desktop apps, contador en costa rica"
     />
 
     <!-- Open Graph / Facebook / LinkedIn -->
@@ -41,11 +104,11 @@ import FooterSection from "../components/FooterSection.astro";
     <meta property="og:url" content="https://www.danielcarce.com/" />
     <meta
       property="og:title"
-      content="Daniel C. Arce - Accountant & Fullstack Developer"
+      content="Daniel Arce | Soluciones Contables Financieras y de Software Para Pymes"
     />
     <meta
       property="og:description"
-      content="Daniel C. Arce es un desarrollador de software fullstack y contador privado especializado en resolución problemas."
+      content="Soluciones Integrales en Contabilidad Financiera y  Software Para Pymes de Costa Rica"
     />
 
     <!-- Twitter -->
@@ -53,11 +116,11 @@ import FooterSection from "../components/FooterSection.astro";
     <meta name="twitter:url" content="https://www.danielcarce.com/" />
     <meta
       name="twitter:title"
-      content="Daniel C. Arce - Accountant & Fullstack Developer"
+      content="Daniel Arce | Soluciones Contables Financieras y de Software Para Costa Rica"
     />
     <meta
       name="twitter:description"
-      content="Daniel C. Arce es un desarrollador de software fullstack y contador privado especializado en resolución problemas."
+      content="Soluciones Integrales en Contabilidad Financiera y  Software Para Pymes de Costa Rica"
     />
     <meta name="twitter:image" content="https://danielcarce.com/og-image.png" />
   </head>
