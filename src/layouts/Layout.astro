@@ -9,21 +9,20 @@ const schema = {
     {
       "@type": "Person",
       "@id": "https://www.danielcarce.com/#person",
-      "name": "Daniel Arce",
-      "url": "https://www.danielcarce.com",
+      name: "Daniel Arce",
+      url: "https://www.danielcarce.com",
       // Mezclamos roles en inglés y español para máxima cobertura
-      "jobTitle": [
-        "Senior Software Engineer", 
-        "Contador Privado", 
-        "Accountant", 
-        "Desarrollador de Software"
+      jobTitle: [
+        "Senior Software Engineer",
+        "Contador Privado",
+        "Accountant",
+        "Desarrollador de Software",
       ],
-      "description": "Consultor integral para PYMES en Costa Rica. Especialista en la intersección de tecnología avanzada y precisión contable.",
-      "sameAs": [
-        "https://www.instagram.com/30thopps"
-      ],
+      description:
+        "Consultor integral para PYMES en Costa Rica. Especialista en la intersección de tecnología avanzada y precisión contable.",
+      sameAs: ["https://www.instagram.com/30thopps"],
       // Aquí listamos tus "entidades" de conocimiento
-      "knowsAbout": [
+      knowsAbout: [
         "Desarrollo de Software a Medida",
         "Contabilidad Financiera",
         "Contabilidad Gerencial",
@@ -35,33 +34,33 @@ const schema = {
         "Transformación Digital",
         ".NET 10",
         "C#",
-        "SQL Server Optimization"
-      ]
+        "SQL Server Optimization",
+      ],
     },
     {
       "@type": "ProfessionalService",
-      "name": "30th Opps",
-      "url": "https://www.danielcarce.com",
-      "image": "https://danielcarce.com/og-image.png",
-      "founder": { "@id": "https://www.danielcarce.com/#person" },
-      "address": {
+      name: "30th Opps",
+      url: "https://www.danielcarce.com",
+      image: "https://danielcarce.com/og-image.png",
+      founder: { "@id": "https://www.danielcarce.com/#person" },
+      address: {
         "@type": "PostalAddress",
-        "addressLocality": "Heredia",
-        "addressRegion": "Heredia",
-        "addressCountry": "CR"
+        addressLocality: "Heredia",
+        addressRegion: "Heredia",
+        addressCountry: "CR",
       },
-      "offers": [
+      offers: [
         {
           "@type": "Service",
-          "name": "Desarrollo de Software y Apps"
+          name: "Desarrollo de Software y Apps",
         },
         {
           "@type": "Service",
-          "name": "Consultoría Contable y Fiscal"
-        }
-      ]
-    }
-  ]
+          name: "Consultoría Contable y Fiscal",
+        },
+      ],
+    },
+  ],
 };
 ---
 
@@ -70,7 +69,9 @@ const schema = {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script type="application/ld+json" set:html={JSON.stringify(schema)} />
-    <title>Daniel Arce | Soluciones Contables Financieras y de Software Para Pymes</title>
+    <title>
+      Daniel Arce | Soluciones Contables Financieras y de Software Para Pymes
+    </title>
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
