@@ -9,20 +9,19 @@ const schema = {
     {
       "@type": "Person",
       "@id": "https://www.danielcarce.com/#person",
-      name: "Daniel Arce",
-      url: "https://www.danielcarce.com",
-      // Mezclamos roles en inglés y español para máxima cobertura
-      jobTitle: [
-        "Senior Software Engineer",
-        "Contador Privado",
-        "Accountant",
-        "Desarrollador de Software",
+      "name": "Daniel Arce",
+      "url": "https://www.danielcarce.com",
+      "jobTitle": [
+        "Senior Software Engineer", 
+        "Contador Privado", 
+        "Accountant", 
+        "Desarrollador de Software"
       ],
-      description:
-        "Consultor integral para PYMES en Costa Rica. Especialista en la intersección de tecnología avanzada y precisión contable.",
-      sameAs: ["https://www.instagram.com/30thopps"],
-      // Aquí listamos tus "entidades" de conocimiento
-      knowsAbout: [
+      "description": "Consultor integral para PYMES en Costa Rica. Especialista en la intersección de tecnología avanzada y precisión contable para optimización de negocios.",
+      "sameAs": [
+        "https://www.instagram.com/30thopps"
+      ],
+      "knowsAbout": [
         "Desarrollo de Software a Medida",
         "Contabilidad Financiera",
         "Contabilidad Gerencial",
@@ -31,36 +30,53 @@ const schema = {
         "Integración de Sistemas",
         "Apps Móviles y de Escritorio",
         "Auditoría Interna de Procesos",
-        "Transformación Digital",
-        ".NET 10",
-        "C#",
-        "SQL Server Optimization",
-      ],
+        "Transformación Digital"
+      ]
     },
     {
       "@type": "ProfessionalService",
-      name: "30th Opps",
-      url: "https://www.danielcarce.com",
-      image: "https://danielcarce.com/og-image.png",
-      founder: { "@id": "https://www.danielcarce.com/#person" },
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Heredia",
-        addressRegion: "Heredia",
-        addressCountry: "CR",
-      },
-      offers: [
+      "name": "30th Opps",
+      "url": "https://www.danielcarce.com",
+      "image": "https://danielcarce.com/og-image.png",
+      "logo": "https://www.danielcarce.com/logo-30thopps.jpg", 
+      "telephone": ["+50664857937", "+50686813736"],
+      "priceRange": "$$",
+      "founder": { "@id": "https://www.danielcarce.com/#person" },
+      "contactPoint": [
         {
-          "@type": "Service",
-          name: "Desarrollo de Software y Apps",
+          "@type": "ContactPoint",
+          "telephone": "+50664857937",
+          "contactType": "WhatsApp",
+          "availableLanguage": ["Spanish", "English"]
         },
         {
-          "@type": "Service",
-          name: "Consultoría Contable y Fiscal",
-        },
+          "@type": "ContactPoint",
+          "telephone": "+50686813736",
+          "contactType": "customer service",
+          "description": "Llamadas telefónicas",
+          "availableLanguage": ["Spanish", "English"]
+        }
       ],
-    },
-  ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Heredia",
+        "addressLocality": "Heredia",
+        "addressRegion": "Heredia",
+        "postalCode": "40101",
+        "addressCountry": "CR"
+      },
+      "offers": [
+        {
+          "@type": "Service",
+          "name": "Desarrollo de Software y Apps"
+        },
+        {
+          "@type": "Service",
+          "name": "Consultoría Contable y Fiscal"
+        }
+      ]
+    }
+  ]
 };
 ---
 
