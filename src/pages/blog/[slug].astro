@@ -26,7 +26,7 @@ if (!post) {
 const { Content } = await render(post);
 ---
 
-<Layout title={post.data.title} date={post.data.date} author={post.data.author} description={post.data.description} keywords={post.data.keywords}>
+<Layout title={post.data.title} date={post.data.date} author={post.data.author} description={post.data.description} keywords={post.data.keywords} slug={post.data.slug}>
   <div class="prose prose-xl max-w-none">
     <Content />
   </div>
