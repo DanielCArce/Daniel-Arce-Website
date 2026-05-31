@@ -1,108 +1,104 @@
+
 ---
 import { getCollection } from "astro:content";
 
-// Obtener últimos 4 artículos ordenados por fecha
 const allPosts = await getCollection("blog");
 const posts = allPosts
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0, 4);
+.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+.slice(0, 4);
 ---
 
-<section class="w-full py-12 md:py-24 bg-white">
+<section class="w-full py-16 md:py-28 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6">
-    <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 md:mb-16 gap-6">
-      <div class="max-w-2xl">
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
-          Bits & <span class="text-emerald-600">Finanzas</span>
-        </h2>
-        <p class="text-slate-500 mt-4 text-base sm:text-lg">
-          Análisis sobre tecnología, optimización y contabilidad moderna para empresas que miran al futuro.
-        </p>
-      </div>
-      
+<!-- HEADER -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 md:mb-16 gap-6">
+  
+  <div class="max-w-2xl">
+    <span class="text-xs font-bold uppercase tracking-widest text-emerald-600">
+      Insights
+    </span>
+
+    <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mt-2">
+      Tecnología, Finanzas & Negocio
+    </h2>
+
+    <p class="text-slate-500 mt-4 text-base sm:text-lg">
+      Estrategias, automatización y análisis para empresas que quieren operar mejor y crecer con control.
+    </p>
+  </div>
+
+  <a
+    href="/blog/"
+    class="hidden md:inline-flex items-center text-slate-900 font-bold hover:text-emerald-600 transition-colors group"
+  >
+    Ver todos
+    <span class="ml-2 transform group-hover:translate-x-1 transition-transform">→</span>
+  </a>
+
+</div>
+
+<!-- GRID -->
+<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+  {
+    posts.map((post) => (
       <a
-        href="/blog/"
-        class="hidden md:inline-flex items-center text-emerald-600 font-bold hover:text-emerald-700 transition-colors group"
+        href={`/blog/${post.data.slug}/`}
+        class="group flex flex-col bg-white rounded-2xl border border-slate-200 hover:border-emerald-300 hover:shadow-xl hover:shadow-emerald-900/5 transition-all duration-300 overflow-hidden"
       >
-        Ver todos los artículos
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-        >
-          <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-        </svg>
+
+        <!-- IMAGE / COVER -->
+        <div class="h-48 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center relative">
+          
+          <span class="absolute top-3 left-3 px-2 py-1 text-[10px] font-bold uppercase tracking-wider bg-white/90 text-slate-900 rounded-md">
+            {post.data.category || "Artículo"}
+          </span>
+
+          <svg class="w-10 h-10 text-white opacity-70 group-hover:scale-110 transition">
+            <path stroke="currentColor" stroke-width="1.5" fill="none" d="M9 12h6m-6 4h6M7 3h5l5 5v13a2 2 0 01-2 2H7a2 2 0 01-2-2V5a2 2 0 012-2z"/>
+          </svg>
+
+        </div>
+
+        <!-- CONTENT -->
+        <div class="p-5 flex flex-col flex-1">
+
+          <time class="text-[11px] font-semibold text-emerald-600 mb-2 uppercase tracking-wide">
+            {new Date(post.data.date).toLocaleDateString("es-ES", {
+              year: "numeric",
+              month: "short",
+              day: "numeric",
+            })}
+          </time>
+
+          <h3 class="text-lg font-bold text-slate-900 mb-2 leading-snug group-hover:text-emerald-600 transition-colors line-clamp-2">
+            {post.data.title}
+          </h3>
+
+          {post.data.description && (
+            <p class="text-slate-500 text-sm line-clamp-3 mb-4 flex-1">
+              {post.data.description}
+            </p>
+          )}
+
+          <div class="text-sm font-semibold text-slate-900 mt-auto group-hover:text-emerald-600 transition-colors">
+            Leer más →
+          </div>
+
+        </div>
+
       </a>
-    </div>
+    ))
+  }
+</div>
 
-    <div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-      {
-        posts.map((post) => (
-          <a
-            href={`/blog/${post.data.slug}/`}
-            class="group flex flex-col h-full bg-slate-50 rounded-[2rem] border border-slate-100 p-3 hover:bg-white hover:border-emerald-200 hover:shadow-2xl hover:shadow-emerald-900/10 transition-all duration-500"
-          >
-            <div class="h-52 w-full bg-slate-200 rounded-[1.5rem] overflow-hidden relative mb-5">
-              <div class="absolute inset-0 bg-gradient-to-br from-slate-900/20 to-slate-900/60 z-10 group-hover:from-emerald-600/30 group-hover:to-emerald-900/80 transition-all duration-500" />
-
-              <div class="absolute top-4 left-4 z-20">
-                <span class="px-3 py-1.5 bg-white/95 backdrop-blur-md text-[10px] font-bold uppercase tracking-widest text-slate-900 rounded-lg shadow-sm">
-                  {post.data.category || "Artículo"}
-                </span>
-              </div>
-
-              <div class="absolute inset-0 flex items-center justify-center opacity-20 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500">
-                <svg
-                  class="w-16 h-16 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-              </div>
-            </div>
-
-            <div class="px-3 pb-5 flex flex-col flex-1">
-              <time class="text-[10px] font-bold text-emerald-600 mb-3 uppercase tracking-wider">
-                {new Date(post.data.date).toLocaleDateString("es-ES", {
-                  year: "numeric",
-                  month: "short",
-                  day: "numeric",
-                })}
-              </time>
-
-              <h3 class="text-xl font-bold text-slate-900 mb-3 leading-tight group-hover:text-emerald-700 transition-colors line-clamp-2">
-                {post.data.title}
-              </h3>
-
-              {post.data.description && (
-                <p class="text-slate-500 text-sm line-clamp-3 mb-6 flex-1 leading-relaxed">
-                  {post.data.description}
-                </p>
-              )}
-
-              <div class="flex items-center text-sm font-bold text-slate-900 mt-auto">
-                <span class="relative overflow-hidden inline-block">
-                  <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">
-                    Leer reporte <span class="ml-1 text-emerald-500">→</span>
-                  </span>
-                </span>
-              </div>
-            </div>
-          </a>
-        ))
-      }
-    </div>
-
-    <div class="mt-10 flex justify-center md:hidden">
-      <a
-        href="/blog/"
-        class="w-full text-center px-8 py-4 bg-slate-900 text-white font-bold rounded-2xl hover:bg-slate-800 active:scale-[0.98] transition-all shadow-xl shadow-slate-200"
-      >
-        Ver todos los artículos
-      </a>
-    </div>
+<!-- MOBILE CTA -->
+<div class="mt-12 flex justify-center md:hidden">
+  <a
+    href="/blog/"
+    class="w-full text-center px-8 py-4 bg-slate-900 text-white font-bold rounded-xl hover:bg-slate-800 transition"
+  >
+    Ver todos los artículos
+  </a>
+</div>
   </div>
 </section>
