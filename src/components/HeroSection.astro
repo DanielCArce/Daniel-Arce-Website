@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+import SocialWidget from './SocialWidget.astro';
 ---
 <section class="relative pt-20 pb-16 lg:pt-32 lg:pb-24 bg-white overflow-hidden">
   <div class="absolute inset-0 z-0 opacity-30 [background-image:radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px]"></div>
@@ -35,19 +36,6 @@ import { Image } from 'astro:assets';
         Ver servicios
       </a>
     </div>
-
-    <!-- POSITIONING -->
-    <div class="mt-12 flex items-center gap-6 text-slate-400">
-      <div class="flex flex-col">
-        <span class="text-2xl font-bold text-slate-900">
-          Software & Finanzas
-        </span>
-        <span class="text-sm uppercase tracking-tighter">
-          Fullstack + Contabilidad
-        </span>
-      </div>
-    </div>
-
   </div>
 
   <!-- RIGHT -->
@@ -60,7 +48,7 @@ import { Image } from 'astro:assets';
       <div class="relative bg-white border border-slate-100 p-4 rounded-[2.5rem] shadow-2xl">
         <Image 
           src="/images/Daniel_Photo.webp" 
-          class="rounded-[2rem] w-full object-cover grayscale hover:grayscale-0 transition-all duration-700 aspect-[4/5]"   
+          class="rounded-[2rem] w-full object-cover hover:grayscale-1 transition-all duration-700 aspect-[4/5]"   
           alt="Foto de Daniel Campos Arce" 
           width={500} 
           height={625} 
