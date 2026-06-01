@@ -34,23 +34,23 @@ const { title, date, author, description, keywords, slug } = Astro.props;
     />
     <meta
       name="description"
-      content="Soluciones Integrales en Contabilidad Financiera y  Software Para Pymes de Costa Rica"
+      content={description}
     />
     <meta
       name="keywords"
-      content="contador, desarrollador de sotware en costa rica, fulstack developer, contador en heredia, sitio web, website, aplicaciones moviles, mobile apps, desktop apps"
-    />
+      content={keywords.join(", ")}
+    />  
 
     <!-- Open Graph / Facebook / LinkedIn -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.danielcarce.com/" />
     <meta
       property="og:title"
-      content="Daniel Arce | Soluciones Contables Financieras y de Software Para Pymes"
+      content={title}
     />
     <meta
       property="og:description"
-      content="Soluciones Integrales en Contabilidad Financiera y  Software Para Pymes de Costa Rica"
+      content= {description}
     />
 
     <!-- Twitter -->
@@ -58,11 +58,11 @@ const { title, date, author, description, keywords, slug } = Astro.props;
     <meta name="twitter:url" content="https://www.danielcarce.com/" />
     <meta
       name="twitter:title"
-      content="Daniel Arce | Soluciones Contables Financieras y de Software Para Costa Rica"
+      content={title}
     />
     <meta
       name="twitter:description"
-      content="Soluciones Integrales en Contabilidad Financiera y  Software Para Pymes de Costa Rica"
+      content={description}
     />
     <meta
       name="twitter:image"
