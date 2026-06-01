@@ -11,7 +11,7 @@ const { title, date, author, description, keywords, slug } = Astro.props;
     <link rel="canonical" href={`https://www.danielcarce.com/blog/${slug}`} />
     <meta name="robots" content="index, follow" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>{title} Daniel Arce | Soluciones Contable Financieras y de Software Para Costa Rica</title>
+    <title>{title} | Daniel Arce</title>
      <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
@@ -28,47 +28,22 @@ const { title, date, author, description, keywords, slug } = Astro.props;
     <!-- End Google Tag Manager -->
     <meta name="description" content={description}/>
     <meta name="keywords" content={keywords.join()}/>
-<meta
-      name="title"
-      content="Daniel Arce | Soluciones Contables Financieras y de Software Para Pymes"
-    />
-    <meta
-      name="description"
-      content={description}
-    />
-    <meta
-      name="keywords"
-      content={keywords.join(", ")}
-    />  
-
+    <meta name="title" content="Daniel Arce | Soluciones Contables Financieras y de Software Para Pymes"/>
+    <meta name="description" content={description}/>
+    <meta name="keywords" content={keywords.join(", ")}/>  
     <!-- Open Graph / Facebook / LinkedIn -->
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://www.danielcarce.com/" />
-    <meta
-      property="og:title"
-      content={title}
-    />
-    <meta
-      property="og:description"
-      content= {description}
-    />
+    <meta property="og:title" content={title}/>
+    <meta property="og:description" content= {description}/>
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://www.danielcarce.com/" />
-    <meta
-      name="twitter:title"
-      content={title}
-    />
-    <meta
-      name="twitter:description"
-      content={description}
-    />
-    <meta
-      name="twitter:image"
-      content="https://danielcarce.com/og-image.png"
-    />
-<meta name="twitter:image" content="https://danielcarce.com/og-image.png">
+    <meta name="twitter:title" content={title}/>
+    <meta name="twitter:description" content={description}/>
+    <meta name="twitter:image" content="https://danielcarce.com/og-image.png"/>
+    <meta name="twitter:image" content="https://danielcarce.com/og-image.png">
   </head>
   <body class="bg-gray-50 text-gray-900 font-sans">
      <!-- Google Tag Manager (noscript) -->
@@ -90,13 +65,11 @@ const { title, date, author, description, keywords, slug } = Astro.props;
             {author ? ` | por ${author}` : ""}
           </p>
         </header>
-
         <div class="max-w-full text-gray-800">
           <slot />
         </div>
       </article>
     </main>
-
     <FooterSection/>
   </body>
 </html>
