@@ -28,18 +28,18 @@ const { title, date, author, description, keywords, slug } = Astro.props;
     <!-- End Google Tag Manager -->
     <meta name="description" content={description}/>
     <meta name="keywords" content={keywords.join()}/>
-    <meta name="title" content="Daniel Arce | Soluciones Contables Financieras y de Software Para Pymes"/>
+    <meta name="title" content={`${title} | Daniel Arce`}/>
     <meta name="description" content={description}/>
     <meta name="keywords" content={keywords.join(", ")}/>  
     <!-- Open Graph / Facebook / LinkedIn -->
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://www.danielcarce.com/" />
+    <meta property="og:url" content={`https://www.danielcarce.com/blog/${slug}`} />
     <meta property="og:title" content={title}/>
     <meta property="og:description" content= {description}/>
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://www.danielcarce.com/" />
+    <meta name="twitter:url" content={`https://www.danielcarce.com/blog/${slug}`} />
     <meta name="twitter:title" content={title}/>
     <meta name="twitter:description" content={description}/>
     <meta name="twitter:image" content="https://danielcarce.com/og-image.png"/>
