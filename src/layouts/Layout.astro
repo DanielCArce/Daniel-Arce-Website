@@ -12,45 +12,69 @@ const schema = {
       "name": "Daniel Arce",
       "url": "https://www.danielcarce.com",
       "jobTitle": [
-        "Senior Software Engineer", 
-        "Contador Privado", 
-        "Accountant", 
-        "Desarrollador de Software"
+        "Senior Software Engineer",
+        "Contador Privado",
+        "Private Accountant",
+        "Fractional CFO",
+        "Desarrollador de Software",
+        "Consultor Tecnológico y Financiero",
+        "Arquitecto de Software"
       ],
-      "description": "Consultor integral para PYMES en Costa Rica. Especialista en la intersección de tecnología avanzada y precisión contable para optimización de negocios.",
+      "description": "Consultor integral y Fractional CFO para PYMES en Costa Rica. Experto en la intersección de infraestructura tecnológica avanzada, desarrollo de software y precisión financiera y contable.",
       "sameAs": [
+        "https://www.linkedin.com/in/danielcarce",
         "https://www.instagram.com/30thopps"
       ],
       "knowsAbout": [
+        "Fractional CFO",
+        "Planificación de Impuestos",
+        "Presupuestos y Control Financiero",
+        "Análisis Financieros",
+        "Análisis Contables",
+        "Revisiones de Infraestructura Tecnológica",
         "Desarrollo de Software a Medida",
-        "Contabilidad Financiera",
-        "Contabilidad Gerencial",
-        "Asesoría y Planificación Fiscal",
+        "Desarrollo de Aplicaciones Móviles y Web",
+        "Sistemas de Escritorio y Cloud",
+        "Integración de Sistemas y APIs",
         "Automatización de Procesos (BPA)",
-        "Integración de Sistemas",
-        "Apps Móviles y de Escritorio",
-        "Auditoría Interna de Procesos",
+        "Optimización de Flujos de Trabajo",
+        "Contabilidad Financiera y Gerencial",
         "Transformación Digital"
-      ]
+      ],
+      "worksFor": {
+        "@id": "https://www.danielcarce.com/#service"
+      }
     },
     {
       "@type": "ProfessionalService",
-      "name": "Daniel Arce",
+      "@id": "https://www.danielcarce.com/#service",
+      "name": "Daniel Software & Finance",
+      "alternateName": [
+        "Daniel Arce - Consultoría Tecnológica y Contable",
+        "Daniel Arce Software & Contabilidad"
+      ],
       "url": "https://www.danielcarce.com",
       "image": "https://danielcarce.com/og-image.png",
       "logo": "https://www.danielcarce.com/favicon-32x32.png", 
       "telephone": ["+50664857937", "+50686813736"],
       "priceRange": "$$",
-      "founder": { "@id": "https://www.danielcarce.com/#person" },
+      "founder": { 
+        "@id": "https://www.danielcarce.com/#person" 
+      },
+      "sameAs": [
+        "https://www.google.com/search?kgmid=%2Fg%2F11zx4vyp7n"
+      ],
       "contactPoint": [
         {
           "@type": "ContactPoint",
+          "@id": "https://www.danielcarce.com/#whatsapp",
           "telephone": "+50664857937",
           "contactType": "WhatsApp",
           "availableLanguage": ["Spanish", "English"]
         },
         {
           "@type": "ContactPoint",
+          "@id": "https://www.danielcarce.com/#phone",
           "telephone": "+50686813736",
           "contactType": "customer service",
           "description": "Llamadas telefónicas",
@@ -59,20 +83,53 @@ const schema = {
       ],
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Heredia",
+        "streetAddress": "Heredia centro",
         "addressLocality": "Heredia",
         "addressRegion": "Heredia",
         "postalCode": "40101",
         "addressCountry": "CR"
       },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 9.9988,
+        "longitude": -84.1165
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Costa Rica"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "17:00"
+      },
       "offers": [
         {
           "@type": "Service",
-          "name": "Desarrollo de Software y Apps"
+          "name": "Fractional CFO y Análisis Financieros",
+          "description": "Dirección financiera externa, análisis financieros profundos, control de presupuestos y toma de decisiones gerenciales basadas en datos."
         },
         {
           "@type": "Service",
-          "name": "Consultoría Contable y Fiscal"
+          "name": "Planificación de Impuestos y Contabilidad",
+          "description": "Estrategia fiscal, cumplimiento tributario adaptado a Costa Rica y análisis contables rigurosos para PYMES."
+        },
+        {
+          "@type": "Service",
+          "name": "Revisiones de Infraestructura Tecnológica",
+          "description": "Auditoría y evaluación de arquitecturas de software, sistemas y servidores para garantizar seguridad, escalabilidad y eficiencia."
+        },
+        {
+          "@type": "Service",
+          "name": "Desarrollo de Software y Automatización (BPA)",
+          "description": "Creación de aplicaciones a medida, sistemas web/cloud y automatización de procesos operativos para negocios."
         }
       ]
     }
@@ -120,7 +177,7 @@ const schema = {
     <link rel="icon" type="image/png" href="/favicon-32x32.png" />
     <meta
       name="title"
-      content="Daniel Arce | Soluciones Contables Financieras y de Software Para Pymes"
+      content="Soluciones Contables Financieras y de Software Para Pymes | Daniel Arce"
     />
     <meta
       name="description"
@@ -136,7 +193,7 @@ const schema = {
     <meta property="og:url" content="https://www.danielcarce.com/" />
     <meta
       property="og:title"
-      content="Daniel Arce | Soluciones Contables Financieras y de Software Para Pymes"
+      content="Soluciones Contables Financieras y de Software Para Pymes | Daniel Arce"
     />
     <meta
       property="og:description"
@@ -148,7 +205,7 @@ const schema = {
     <meta name="twitter:url" content="https://www.danielcarce.com/" />
     <meta
       name="twitter:title"
-      content="Daniel Arce | Soluciones Contables Financieras y de Software Para Costa Rica"
+      content="Soluciones Contables Financieras y de Software Para Costa Rica | Daniel Arce" 
     />
     <meta
       name="twitter:description"
