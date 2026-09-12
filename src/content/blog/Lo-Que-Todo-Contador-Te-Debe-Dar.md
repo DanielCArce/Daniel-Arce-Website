@@ -125,4 +125,4 @@ Dejar atrás el estigma del contador "tramitador" es el primer paso para constru
 
 **¿Listo para llevar las finanzas y la tecnología de tu empresa al siguiente nivel?**
 
-No dejes que una contabilidad pasiva o una tecnología obsoleta frenen el potencial de tu negocio. **Agenda hoy una consulta estratégica de Fractional CFO o una revisión de tu infraestructura tecnológica.** Analicemos juntos tus números, optimicemos tus procesos operativos y construyamos la hoja de ruta que tu PYME necesita para crecer con certeza en Costa Rica
+No dejes que una contabilidad pasiva o una tecnología obsoleta frenen el potencial de tu negocio. [**Agenda hoy una consulta estratégica de Fractional CFO o una revisión de tu infraestructura tecnológica.**](https://www.danielcarce.com/#contacto) Analicemos juntos tus números, optimicemos tus procesos operativos y construyamos la hoja de ruta que tu PYME necesita para crecer con certeza en Costa Rica
