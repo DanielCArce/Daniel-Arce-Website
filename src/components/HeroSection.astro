@@ -1,91 +1,157 @@
 ---
+
 import { Image } from 'astro:assets';
 import SocialWidget from './SocialWidget.astro';
 ---
+
 <section class="relative pt-20 pb-16 lg:pt-32 lg:pb-24 bg-white overflow-hidden">
-  <div class="absolute inset-0 z-0 opacity-30 [background-image:radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px]"></div>
-
-  <div class="container mx-auto px-4 relative z-10">
+    <div class="absolute inset-0 z-0 opacity-30 [background-image:radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px]"></div>
+<div class="container mx-auto px-4 relative z-10">
     <div class="flex flex-wrap items-center -mx-4">
-  <!-- LEFT -->
-  <div class="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
 
-    <!-- BADGE -->
-    <div class="inline-flex items-center py-1 px-3 mb-6 bg-emerald-50 border border-emerald-100 rounded-full">
-      <span class="text-xs font-bold text-emerald-600 uppercase tracking-widest">
-        Soluciones financieras y tecnológicas
-      </span>
-    </div>
-    
-    <!-- TITLE -->
-    <h1 class="text-5xl lg:text-7xl font-extrabold text-slate-900 mb-6 leading-tight">
-      Daniel <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600">Arce</span>
-    </h1>
-    
-    <!-- SUBTITLE -->
-    <p class="text-xl lg:text-2xl text-slate-600 mb-10 leading-relaxed max-w-xl">
-      Combino contabilidad y desarrollo de software para construir sistemas que optimizan tu empresa, reducen errores y te dan control financiero real.
-    </p>
-    
-    <!-- CTA -->
-    <div class="flex flex-col sm:flex-row gap-4">
-      <a href="#contacto" class="px-8 py-4 bg-slate-900 text-white font-bold rounded-xl hover:bg-slate-800 transition-all text-center shadow-lg shadow-slate-200">
-        Agendar diagnóstico
-      </a>
-      <a href="#servicios" class="px-8 py-4 bg-white text-slate-900 font-bold rounded-xl border border-slate-200 hover:border-slate-900 transition-all text-center">
-        Ver servicios
-      </a>
-    </div>
-  </div>
+        <!-- LEFT -->
+        <div class="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
 
-  <!-- RIGHT -->
-  <div class="w-full lg:w-1/2 px-4">
-    <div class="relative">
+            <!-- BADGE -->
+            <div class="inline-flex items-center py-1 px-3 mb-6 bg-emerald-50 border border-emerald-100 rounded-full">
+                <span class="text-xs font-bold text-emerald-600 uppercase tracking-widest">
+                    Software · Finanzas · Automatización
+                </span>
+            </div>
 
-      <div class="absolute -top-10 -right-10 w-64 h-64 bg-emerald-100 rounded-full blur-3xl opacity-50"></div>
-      <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-blue-100 rounded-full blur-3xl opacity-50"></div>
-      
-      <div class="relative bg-white border border-slate-100 p-4 rounded-[2.5rem] shadow-2xl">
-        <Image
-          src="/images/Daniel_Photo.webp" 
-          class="rounded-[2rem] w-full object-cover hover:grayscale-1 transition-all duration-700 aspect-[4/5]"   
-          alt="Foto de Daniel Campos Arce" 
-          width={500} 
-          height={625}
-          priority="true"
-          loading="eager"
-          fetchpriority="high"
-          widths={[240, 540, 720]}
-          sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, 1600px`}
-        />
-        
-        <!-- FLOATING CARD -->
-        <div class="absolute bottom-10 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-slate-50 flex items-center gap-4 animate-bounce-slow">
-          <div class="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-white">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-          </div>
-          <div>
-            <p class="text-xs text-slate-500 font-bold uppercase">Precisión y Automatización</p>
-            <p class="text-sm text-slate-900 font-medium">Sistemas sin errores operativos</p>
-          </div>
+            <!-- TITLE -->
+            <h1 class="text-5xl lg:text-7xl font-extrabold text-slate-900 mb-6 leading-tight">
+                Convierte la
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600">
+                    complejidad
+                </span>
+                de tu empresa en control.
+            </h1>
+
+            <!-- SUBTITLE -->
+            <p class="text-xl lg:text-2xl text-slate-600 mb-6 leading-relaxed max-w-xl">
+                Integro tecnología, automatización y finanzas para ayudarte a
+                <strong class="text-slate-900">reducir procesos manuales, controlar tus costos y tomar mejores decisiones.</strong>
+            </p>
+
+            <p class="text-base text-slate-500 mb-10 leading-relaxed max-w-xl">
+                Desde el desarrollo de software y la automatización de procesos
+                hasta la contabilidad y la gestión financiera de tu empresa.
+                Una visión integral para hacer que tu negocio funcione mejor.
+            </p>
+
+            <!-- CTA -->
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a
+                    href="#contacto"
+                    class="px-8 py-4 bg-slate-900 text-white font-bold rounded-xl hover:bg-slate-800 transition-all text-center shadow-lg shadow-slate-200"
+                >
+                    Agendar diagnóstico
+                </a>
+
+                <a
+                    href="#servicios"
+                    class="px-8 py-4 bg-white text-slate-900 font-bold rounded-xl border border-slate-200 hover:border-slate-900 transition-all text-center"
+                >
+                    Ver servicios
+                </a>
+            </div>
+
+            <!-- TRUST POINTS -->
+            <div class="mt-10 flex flex-wrap gap-x-6 gap-y-3 text-sm text-slate-500">
+                <div class="flex items-center gap-2">
+                    <span class="text-emerald-600">✓</span>
+                    Procesos más eficientes
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <span class="text-emerald-600">✓</span>
+                    Información financiera clara
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <span class="text-emerald-600">✓</span>
+                    Tecnología orientada al negocio
+                </div>
+            </div>
+
         </div>
 
-      </div>
-    </div>
-  </div>
 
+        <!-- RIGHT -->
+        <div class="w-full lg:w-1/2 px-4">
+            <div class="relative">
+
+                <div class="absolute -top-10 -right-10 w-64 h-64 bg-emerald-100 rounded-full blur-3xl opacity-50"></div>
+                <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-blue-100 rounded-full blur-3xl opacity-50"></div>
+
+                <div class="relative bg-white border border-slate-100 p-4 rounded-[2.5rem] shadow-2xl">
+
+                    <Image
+                        src="/images/Daniel_Photo.webp"
+                        class="rounded-[2rem] w-full object-cover hover:grayscale-1 transition-all duration-700 aspect-[4/5]"
+                        alt="Daniel Campos Arce"
+                        width={500}
+                        height={625}
+                        priority="true"
+                        loading="eager"
+                        fetchpriority="high"
+                        widths={[240, 540, 720]}
+                        sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, 1600px`}
+                    />
+
+                    <!-- FLOATING CARD -->
+                    <div class="absolute bottom-10 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-slate-50 flex items-center gap-4 animate-bounce-slow">
+
+                        <div class="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-white">
+                            <svg
+                                class="w-6 h-6"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                                ></path>
+                            </svg>
+                        </div>
+
+                        <div>
+                            <p class="text-xs text-slate-500 font-bold uppercase">
+                                Tecnología + Finanzas
+                            </p>
+
+                            <p class="text-sm text-slate-900 font-medium">
+                                Una visión integral del negocio
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>
-</div>
+
 </section>
 
 <style>
-  @keyframes bounce-slow {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-  }
-  .animate-bounce-slow {
-    animation: bounce-slow 4s ease-in-out infinite;
-  }
+    @keyframes bounce-slow {
+        0%, 100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    .animate-bounce-slow {
+        animation: bounce-slow 4s ease-in-out infinite;
+    }
 </style>
