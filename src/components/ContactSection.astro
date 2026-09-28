@@ -1,123 +1,282 @@
 ---
-import ContactForm from "./ContactForm.astro";
+// Contacto.astro (v4): sección de contacto sin formulario.
+// Los datos se codifican en base64 al compilar y se decodifican en el navegador,
+// así no aparecen como texto plano ni como href en el HTML que ven los scrapers.
+const enc = (s: string) => Buffer.from(s).toString("base64");
+
+const WHATSAPP = enc("50664857937");
+const TELEFONO = enc("+50686813736");
+const CORREO = enc("hola@danielcarce.com");
+
+// Link de Cal.com / Calendly / Google Calendar. Si queda vacío, ese canal no se muestra.
+const BOOKING_URL = "";
+
+const icons = {
+  software: "M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4",
+  contabilidad:
+    "M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z",
+  tel: "M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z",
+  mail: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
+  booking:
+    "M8 7V3m8 4V3M4 11h16M5 5h14a1 1 0 011 1v14a1 1 0 01-1 1H5a1 1 0 01-1-1V6a1 1 0 011-1z",
+};
+
+const grupos = [
+  {
+    titulo: "Tecnología",
+    icono: "software",
+    servicios: [
+      { id: "sitios-web", nombre: "Sitios web empresariales" },
+      {
+        id: "seo-ia",
+        nombre: "Posicionamiento en buscadores y buscadores de IA",
+      },
+      { id: "apps-moviles", nombre: "Aplicaciones móviles para Android y iOS" },
+      { id: "marketing-digital", nombre: "Marketing digital" },
+      {
+        id: "automatizacion",
+        nombre: "Automatización de procesos empresariales",
+      },
+      {
+        id: "infraestructura",
+        nombre: "Optimización de infraestructura empresarial",
+      },
+    ],
+  },
+  {
+    titulo: "Contabilidad y finanzas",
+    icono: "contabilidad",
+    servicios: [
+      { id: "contabilidad-general", nombre: "Contabilidad general" },
+      { id: "planificacion-fiscal", nombre: "Planificación fiscal" },
+      { id: "contabilidad-costos", nombre: "Contabilidad de costos" },
+      { id: "planillas", nombre: "Planillas de empleados" },
+      { id: "asesoria-financiera", nombre: "Asesoría financiera" },
+      {
+        id: "estructura-operativa",
+        nombre: "Revisión de estructura operativa",
+      },
+      { id: "fractional-cfo", nombre: "Fractional CFO" },
+    ],
+  },
+];
+
+const otros = [
+  {
+    tipo: "tel",
+    v: TELEFONO,
+    titulo: "Llamar",
+    detalle: "Hablemos ahora mismo.",
+  },
+  {
+    tipo: "mail",
+    v: CORREO,
+    titulo: "Escribir por correo",
+    detalle: "Cuéntame tu caso con detalle.",
+  },
+  ...(BOOKING_URL
+    ? [
+        {
+          tipo: "booking",
+          href: BOOKING_URL,
+          titulo: "Agendar diagnóstico",
+          detalle: "Reserva una hora en mi calendario.",
+        },
+      ]
+    : []),
+];
+
+const colsOtros = otros.length === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2";
+const focus =
+  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2";
 ---
 
-<section id="contacto" class="relative py-24 bg-slate-50 overflow-hidden">
-  <div
-    class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-emerald-50 rounded-full blur-3xl"
-  >
-  </div>
+<section id="contacto" class="bg-slate-50 py-20 md:py-28">
+  <div class="mx-auto max-w-5xl px-6">
+    <div class="max-w-2xl">
+      <h2
+        class="text-3xl font-extrabold tracking-tight text-slate-900 md:text-5xl"
+      >
+        Convierte tu empresa en un sistema eficiente
+      </h2>
+      <p class="mt-4 text-lg leading-relaxed text-slate-600">
+        Diseño sistemas financieros y software empresarial que te dan control
+        total sobre tu negocio y eliminan el caos operativo.
+      </p>
+    </div>
 
-  <div class="max-w-6xl mx-auto px-6 relative z-10">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-      <div class="flex flex-col space-y-10">
-        <div>
-          <h2
-            class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-6"
+    <div
+      class="mt-10 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
+    >
+      <!-- Arriba: servicios en dos columnas -->
+      <div class="p-6 md:p-8">
+        <h3 class="text-xl font-bold text-slate-900">¿Qué necesitas?</h3>
+        <p class="mt-1 text-slate-500">
+          Toca un servicio y se abre WhatsApp con el mensaje listo para enviar.
+        </p>
+
+        <div class="mt-8 grid gap-10 md:grid-cols-2 md:gap-0">
+          {
+            grupos.map((g, i) => (
+              <div
+                class={
+                  i === 0
+                    ? "md:pr-8"
+                    : "md:border-l md:border-slate-200 md:pl-8"
+                }
+              >
+                <div class="flex items-center gap-3">
+                  <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-50 text-emerald-700">
+                    <svg
+                      class="h-5 w-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.8"
+                        d={icons[g.icono as keyof typeof icons]}
+                      />
+                    </svg>
+                  </span>
+                  <h4 class="text-lg font-bold text-slate-900">{g.titulo}</h4>
+                </div>
+                <ul class="mt-4 space-y-2">
+                  {g.servicios.map((s) => (
+                    <li>
+                      <a
+                        href="#contacto"
+                        data-contact="wa"
+                        data-v={WHATSAPP}
+                        data-service={s.id}
+                        data-msg={`Hola Daniel, vi tu web y me interesa: ${s.nombre}.`}
+                        class={`block rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm font-medium text-slate-700 transition-colors hover:border-emerald-600 hover:bg-emerald-50 hover:text-emerald-800 ${focus}`}
+                      >
+                        {s.nombre}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))
+          }
+        </div>
+
+        <p class="mt-8 text-slate-600">
+          ¿Algo distinto?
+          <a
+            href="#contacto"
+            data-contact="wa"
+            data-v={WHATSAPP}
+            data-service="otra"
+            data-msg="Hola Daniel, vi tu web y quiero hacerte una consulta."
+            class={`rounded font-semibold text-emerald-700 underline decoration-emerald-300 underline-offset-4 hover:decoration-emerald-700 ${focus}`}
           >
-            Convierte tu empresa en un <span class="text-emerald-600"
-              >sistema eficiente</span
-            >
-          </h2>
+            Escríbeme directo por WhatsApp
+          </a>
+        </p>
+      </div>
 
-          <p class="text-slate-600 text-lg leading-relaxed max-w-md">
-            Diseño sistemas financieros y software empresarial que te dan
-            control total sobre tu negocio y eliminan el caos operativo.
+      <!-- Abajo: otros canales en una fila -->
+      <div class="border-t border-slate-200 bg-slate-50 p-6 md:p-8">
+        <div
+          class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between"
+        >
+          <h3 class="text-xl font-bold text-slate-900">Prefiero otro medio</h3>
+          <p class="flex items-center gap-2 text-sm text-slate-600">
+            <span class="h-2 w-2 rounded-full bg-emerald-500" aria-hidden="true"
+            ></span>
+            Respuesta garantizada en menos de 24 horas.
           </p>
         </div>
-        <div class="grid gap-4">
-          <a
-            href="https://wa.me/50664857937"
-            target="_blank"
-            class="group flex items-center gap-4 p-5 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:border-emerald-200 transition-all duration-300"
-          >
-            <div
-              class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition"
-            >
-              <svg
-                class="h-6 w-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-width="2"
-                  d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
-                ></path>
-              </svg>
-            </div>
-            <div>
-              <p
-                class="text-xs font-bold uppercase tracking-wider text-slate-400"
-              >
-                WhatsApp
-              </p>
-              <p class="text-lg font-bold text-slate-800">+506 6485 7937</p>
-            </div>
-          </a>
-          <a
-            href="tel:+50686813736"
-            class="group flex items-center gap-4 p-5 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300"
-          >
-            <div
-              class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition"
-            >
-              <svg
-                class="h-6 w-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-width="2"
-                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                ></path>
-              </svg>
-            </div>
-            <div>
-              <p
-                class="text-xs font-bold uppercase tracking-wider text-slate-400"
-              >
-                Llamada directa
-              </p>
-              <p class="text-lg font-bold text-slate-800">+506 8681 3736</p>
-            </div>
-          </a>
-          <a
-            href="mailto:hola@danielcarce.com"
-            class="group flex items-center gap-4 p-5 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:border-slate-300 transition-all duration-300"
-          >
-            <div
-              class="w-12 h-12 bg-slate-100 text-slate-600 rounded-xl flex items-center justify-center group-hover:bg-slate-900 group-hover:text-white transition"
-            >
-              <svg
-                class="h-6 w-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-width="2"
-                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                ></path>
-              </svg>
-            </div>
-            <div>
-              <p
-                class="text-xs font-bold uppercase tracking-wider text-slate-400"
-              >
-                Correo
-              </p>
-              <p class="text-lg font-bold text-slate-800">
-                hola@danielcarce.com
-              </p>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="lg:sticky lg:top-8">
-        <ContactForm />
+
+        <ul class={`mt-5 grid gap-3 ${colsOtros}`}>
+          {
+            otros.map((o) => (
+              <li>
+                <a
+                  href={o.href ?? "#contacto"}
+                  data-contact={o.tipo}
+                  data-v={o.v}
+                  target={o.href ? "_blank" : undefined}
+                  rel={o.href ? "noopener" : undefined}
+                  class={`group flex h-full items-center gap-4 rounded-xl border border-slate-200 bg-white p-4 transition-colors hover:border-slate-900 ${focus}`}
+                >
+                  <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-slate-100 text-slate-700 transition-colors group-hover:bg-slate-900 group-hover:text-white">
+                    <svg
+                      class="h-5 w-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.8"
+                        d={icons[o.tipo as keyof typeof icons]}
+                      />
+                    </svg>
+                  </span>
+                  <span>
+                    <span class="block font-semibold text-slate-900">
+                      {o.titulo}
+                    </span>
+                    <span class="block text-sm text-slate-500">
+                      {o.detalle}
+                    </span>
+                  </span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
       </div>
     </div>
   </div>
 </section>
+
+<script>
+  // Arma los enlaces en el navegador y registra cada clic en Google Tag Manager.
+  const canal = {
+    wa: "whatsapp",
+    tel: "tel",
+    mail: "mail",
+    booking: "booking",
+  } as const;
+
+  document
+    .querySelectorAll<HTMLAnchorElement>("[data-contact]")
+    .forEach((el) => {
+      const tipo = el.dataset.contact as keyof typeof canal;
+
+      if (el.dataset.v) {
+        const valor = atob(el.dataset.v);
+        if (tipo === "wa") {
+          const texto = el.dataset.msg
+            ? `?text=${encodeURIComponent(el.dataset.msg)}`
+            : "";
+          el.href = `https://wa.me/${valor}${texto}`;
+          el.target = "_blank";
+          el.rel = "noopener";
+        } else if (tipo === "tel") {
+          el.href = `tel:${valor}`;
+        } else if (tipo === "mail") {
+          el.href = `mailto:${valor}`;
+        }
+      }
+
+      el.addEventListener("click", () => {
+        const w = window as unknown as { dataLayer?: unknown[] };
+        w.dataLayer = w.dataLayer || [];
+        w.dataLayer.push({
+          event: "contact_click",
+          channel: canal[tipo],
+          service: el.dataset.service ?? null,
+        });
+      });
+    });
+</script>
