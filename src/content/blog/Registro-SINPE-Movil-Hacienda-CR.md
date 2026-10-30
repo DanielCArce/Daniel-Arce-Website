@@ -22,7 +22,7 @@ En términos prácticos para la gestión contable: **si un negocio utiliza SINPE
 
 Para garantizar una transición ordenada, la normativa define una hoja de ruta dividida en distintas fases de preparación tanto para la Administración Tributaria como para los obligados tributarios:
 
-![Línea de tiempo del Decreto 45953-H](https://danielcarce.com/images/Crongrama_Decreto45953-H.webp "Cronología del Decreto")
+![Línea de tiempo del Decreto 45953-H](https://danielcarce.com/images/Cronograma_Decreto45953-H.webp "Cronología del Decreto")
 
 ### 1. Entrada en vigencia oficial (16 de octubre de 2026)
 Hito inicial a partir de la publicación formal del Decreto N° 45953-H en *La Gaceta* N° 196 (Alcance N° 139). Marca el "día cero" para el cómputo de los plazos institucionales.
