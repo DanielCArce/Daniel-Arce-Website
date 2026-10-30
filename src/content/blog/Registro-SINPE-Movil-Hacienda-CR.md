@@ -39,7 +39,7 @@ Los contribuyentes que ya se encuentren inscritos ante la Administración Tribut
 ---
 ## ⚖️ ¿A qué nos exponemos? Lo que establece el Artículo 83 del Código Tributario
 
-Para comprender la magnitud de esta nueva obligación formal, el decreto es enfático en señalar que la falta de registro o la actualización incompleta en el RUT se sanciona bajo el amparo del **Artículo 83 del Código de Normas y Procedimientos Tributarios (Ley N° 4755)**[cite: 3], el cual tipifica las infracciones por el *incumplimiento en el suministro de información*.
+Para comprender la magnitud de esta nueva obligación formal, el decreto es enfático en señalar que la falta de registro o la actualización incompleta en el RUT se sanciona bajo el amparo del **Artículo 83 del Código de Normas y Procedimientos Tributarios (Ley N° 4755)**, el cual tipifica las infracciones por el *incumplimiento en el suministro de información*.
 
 > **Artículo 83.- Incumplimiento en el suministro de información.**
 > *(Extracto clave)* El incumplimiento en la presentación de datos, la omisión de registros obligatorios o el suministro de información con errores de contenido dentro de los plazos establecidos por la Administración Tributaria, da lugar a la aplicación de sanciones pecuniarias.
