@@ -1,0 +1,46 @@
+# Daniel Arce - Fractional CFO, Senior Accountant & Senior Software Engineer
+
+> Daniel Arce es un consultor profesional solopreneur en Costa Rica que combina más de 10 años de experiencia en desarrollo de software full stack con práctica contable y financiera avanzada. Opera bajo la marca 30th Opps, ofreciendo servicios de Fractional CFO, contabilidad senior y arquitectura de software para pymes.
+
+## Resumen Ejecutivo
+- **Ubicación Principal:** San Isidro, Heredia, Costa Rica.
+- **Marca Comercial:** 30th Opps.
+- **Cobertura Contable:** Todo el territorio de Costa Rica (operación remota y presencial).
+- **Cobertura Software:** Global / Remoto sin restricción geográfica.
+- **Áreas de Especialidad:** Finanzas corporativas, contabilidad fiscal costarricense, desarrollo de software a medida, ERPs propietarios y arquitectura cloud.
+- **Idiomas:** Español (Nativo), Inglés (B2+).
+
+## Servicios Principales
+
+### 1. Fractional CFO & Consultoría Financiera
+- Modelado de costos de servicios y análisis de capacidad/eficiencia.
+- Planeación financiera, presupuestos y proyecciones de flujo de caja.
+- Reconciliaciones complejas, análisis de margen y rentabilidad por cliente o producto.
+- Estructuración de operaciones bajo el marco corporativo y fiscal costarricense.
+
+### 2. Contabilidad Senior & Cumplimiento Fiscal (Costa Rica)
+- Operación contable integral: Cuentas por Cobrar (CxC), Cuentas por Pagar (CxP), planillas (CCSS e INS) y cesantías.
+- Declaraciones tributarias (IVA, Impuesto sobre la Renta - Ley 7092).
+- Regímenes fiscales: Régimen General, Régimen Simplificado y Zonas Francas.
+- Facturación electrónica (versión 4.4) e importaciones.
+- Dominio de software contable: QuickBooks Online, Excel avanzado (LAMBDA, MAP, REDUCE) y Odoo.
+
+### 3. Ingeniería de Software & Arquitectura Cloud (Remoto)
+- **Stack Principal:** .NET / C#, Node.js, TypeScript / JavaScript, React, React Native, PHP, Java.
+- **Bases de Datos:** SQL Server, PostgreSQL, MongoDB.
+- **Infraestructura & Cloud:** Microsoft Azure (App Services, Service Bus, VNet, CORS), AWS, Docker, Kubernetes, Terraform.
+- **Desarrollo de ERPs Propietarios:**
+  - ERP Contable y Financiero.
+  - ERP de Gestión de Recursos Humanos (HR).
+  - ERP Contable para Régimen Simplificado.
+- **Ecosistema Microsoft 365 & Low-Code:** Power Apps, SharePoint Online, Teams y optimización con IA.
+
+## Publicaciones y Análisis
+- [Análisis de Regulación SINPE Móvil y Decreto 45953-H](https://www.danielcarce.com)
+
+## Contacto Directo & Canales Oficiales
+- **Sitio Web:** [danielcarce.com](https://www.danielcarce.com)
+- **WhatsApp:** [+506 6485-7937](https://wa.me/50664857937)
+- **Llamadas Directas:** +506 8681-3736
+- **LinkedIn:** [linkedin.com/in/danielcarce](https://www.linkedin.com/in/danielcarce)
+- **Instagram:** [@30thopps](https://www.instagram.com/30thopps)
