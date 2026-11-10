@@ -17,7 +17,6 @@ const { slug } = Astro.params;
 // Obtener el post correspondiente al slug
 const posts = await getCollection("blog");
 const post = posts.find((p) => p.data.slug === slug);
-console.log({posts})
 if (!post) {
   throw new Error(`No post found for slug: ${slug}`);
 }
